@@ -226,9 +226,7 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <footer class="footer">
+  </secti  <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <div>
@@ -247,7 +245,8 @@
             <li><a href="services.html#arbitration" class="footer-link">Arbitration</a></li>
             <li><a href="services.html#mediation" class="footer-link">Mediation</a></li>
             <li><a href="services.html#conciliation" class="footer-link">Conciliation</a></li>
-            <li><a href="training.html" class="footer-link">Training & Accreditation</a></li>
+            <li><a href="training.html" class="footer-link">Training</a></li>
+            <li><a href="services.html#venue" class="footer-link">Venue & Facilities</a></li>
           </ul>
         </div>
         <div>
@@ -257,19 +256,48 @@
             <li><a href="about.html" class="footer-link">About Us</a></li>
             <li><a href="arbitration-rules.html" class="footer-link">Arbitration Rules</a></li>
             <li><a href="mediation-rules.html" class="footer-link">Mediation Rules</a></li>
+            <li><a href="news.html" class="footer-link">News & Events</a></li>
             <li><a href="contact.html" class="footer-link">Contact Us</a></li>
           </ul>
         </div>
         <div>
           <div class="footer-col-title">Contact</div>
-          <div class="footer-contact-item"><i class="fas fa-map-marker-alt footer-contact-icon"></i><div class="footer-contact-text">4th Floor, Trust Tower, Nakasero Road, Kampala, Uganda</div></div>
-          <div class="footer-contact-item"><i class="fas fa-envelope footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div></div>
-          <div class="footer-contact-item"><i class="fas fa-folder-open footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:file@icamek.org">file@icamek.org</a></div></div>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+            <div class="footer-contact-text">4th Floor, Trust Tower, Nakasero Road, Kampala, Uganda</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope footer-contact-icon"></i>
+            <div class="footer-contact-text"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-folder-open footer-contact-icon"></i>
+            <div class="footer-contact-text"><a href="mailto:file@icamek.org">file@icamek.org</a><br><span style="font-size: 0.78rem; color: rgba(255,255,255,0.4);">For filing cases</span></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock footer-contact-icon"></i>
+            <div class="footer-contact-text">Monday Friday, 9:00 AM 5:00 PM</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-partners">
+        <div class="footer-partners-title">Founding Partners & Supporters</div>
+        <div class="footer-partners-logos">
+          <div class="footer-partner-logo"><span>Uganda Law Society</span></div>
+          <div class="footer-partner-logo"><span>Uganda Bankers' Association</span></div>
+          <div class="footer-partner-logo"><span>Private Sector Foundation Uganda</span></div>
+          <div class="footer-partner-logo"><span>Bank of Uganda</span></div>
+          <div class="footer-partner-logo"><span>Uganda Insurers Association</span></div>
+          <div class="footer-partner-logo"><span>Justice, Law & Order Sector</span></div>
+          <div class="footer-partner-logo"><span>Uganda Judiciary</span></div>
+          <div class="footer-partner-logo"><span>Ministry of Justice</span></div>
+          <div class="footer-partner-logo"><span>KACITA</span></div>
+          <div class="footer-partner-logo"><span>ICPAU</span></div>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="footer-copy">2026 International Centre for Arbitration and Mediation in Kampala (ICAMEK). All rights reserved.</div>
-        <div class="footer-authority">An Appointing Authority by the Minister of Justice  Instrument issued 23 April 2019</div>
+        <div class="footer-authority">An Appointing Authority by the Minister of Justice &mdash; Instrument issued 23 April 2019</div>
       </div>
     </div>
   </footer>
@@ -289,8 +317,8 @@
     hamburger.addEventListener('click', () => { hamburger.classList.toggle('menu-open'); mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : ''; });
     mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { hamburger.classList.remove('menu-open'); mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }); });
     document.getElementById('backTop').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-    const revealEls = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1 });
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(el => revealObserver.observe(el));
 
     function filterNews(cat, btn) {
@@ -305,6 +333,7 @@
       });
     }
   </script>
+cript>
 </body>
 </html>
 

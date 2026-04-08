@@ -1,0 +1,11 @@
+
+/* ===== PDF VIEWER COMPONENTS ===== */
+    /* PDF VIEWER */
+    .pdf-viewer-wrap { background: #F8F9FB; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-top: 32px; margin-bottom: 32px; }
+    .pdf-viewer-header { background: var(--primary); padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; }
+    .pdf-viewer-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.9rem; color: white; display: flex; align-items: center; gap: 10px; }
+    .pdf-viewer-title i { color: var(--accent); }
+    .pdf-download-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 18px; border-radius: var(--radius-pill); transition: var(--transition); }
+    .pdf-download-btn:hover { box-shadow: var(--shadow-gold); }
+    .pdf-embed { width: 100%; height: 600px; border: none; display: block; }
+

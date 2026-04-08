@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | ICAMEK  International Centre for Arbitration and Mediation in Kampala</title>
-  <meta name="description" content="Learn about ICAMEK  Uganda's first private sector-led independent centre for arbitration, mediation and alternative dispute resolution. Incorporated 2018, Kampala.">
+  <title>About Us | ICAMEK ┬¥ International Centre for Arbitration and Mediation in Kampala</title>
+  <meta name="description" content="Learn about ICAMEK ┬¥ Uganda's first private sector-led independent centre for arbitration, mediation and alternative dispute resolution. Incorporated 2018, Kampala.">
   <meta name="keywords" content="ICAMEK about, arbitration Uganda history, mediation centre Kampala, ADR institution Uganda">
   <meta property="og:title" content="About ICAMEK | International Centre for Arbitration and Mediation in Kampala">
   <meta property="og:description" content="ICAMEK is an independent, not-for-profit organisation dedicated to advancing Alternative Dispute Resolution in Uganda and across East Africa.">
@@ -15,9 +15,224 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="icon" href="https://icamek.org/wp-content/uploads/2021/11/icamek-logo-white.png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="https://icamek.org/wp-content/uploads/2021/11/icamek-logo-white.png" />
+  <style>
+    /* ===== HIDE SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    html {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+      overflow-x: hidden;
+      width: 100%;
+    }
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    :root {
+      --primary: #1A2E4A; --primary-dark: #0D1B2E; --primary-light: rgba(26,46,74,0.08);
+      --accent: #C9A84C; --accent-dark: #A8873A; --accent-light: rgba(201,168,76,0.15);
+      --secondary: #2E6DA4; --dark: #0D1B2E; --dark-mid: #2C3E50;
+      --text: #1A1A2E; --text-muted: #5A6A7A; --surface: #FFFFFF;
+      --surface-alt: #FFFFFF; --surface-warm: #FFFFFF; --border: #E8ECF2;
+      --gold-gradient: linear-gradient(135deg, #C9A84C 0%, #E8D08A 50%, #C9A84C 100%);
+      --navy-gradient: linear-gradient(135deg, #0D1B2E 0%, #1A2E4A 100%);
+      --shadow-sm: 0 2px 12px rgba(26,46,74,0.07); --shadow-md: 0 8px 40px rgba(26,46,74,0.10);
+      --shadow-lg: 0 24px 64px rgba(26,46,74,0.14); --shadow-gold: 0 4px 24px rgba(201,168,76,0.28);
+      --radius-sm: 4px; --radius-md: 10px; --radius-lg: 20px; --radius-pill: 999px;
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); --nav-height: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--surface); line-height: 1.8; overflow-x: hidden; }
+    img { max-width: 100%; height: auto; } a { text-decoration: none; color: inherit; } ul { list-style: none; }
+
+    @keyframes goldShimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    @keyframes floatScale { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+    .reveal { opacity: 0; transform: translateY(48px); transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-60px); transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1); }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(60px); transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1); }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; } .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* NAVBAR */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000; background: rgba(13,27,46,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-bottom: 1px solid rgba(201,168,76,0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .navbar.scrolled { height: 70px; background: rgba(13,27,46,0.95); }
+    .navbar-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .nav-brand img { max-height: 56px; max-width: 260px; object-fit: contain; width: auto; transition: var(--transition); }
+    .nav-brand-text { display: none; }
+    .nav-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent); line-height: 1.1; letter-spacing: 0.04em; }
+    .nav-brand-sub { font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 0.55rem; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; text-transform: uppercase; max-width: 180px; line-height: 1.3; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-link { position: relative; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.8); padding: 8px 10px; transition: var(--transition); white-space: nowrap; }
+    .nav-link::after { content: ''; position: absolute; bottom: 4px; left: 10px; width: 0; height: 1.5px; background: var(--gold-gradient); transition: width 0.3s ease; }
+    .nav-link:hover { color: var(--accent); }
+    .nav-link:hover::after { width: calc(100% - 20px); }
+    .nav-link.active { color: var(--accent); }
+    .nav-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 10px 20px; border-radius: var(--radius-pill); transition: var(--transition); white-space: nowrap; flex-shrink: 0; }
+    .nav-cta:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 1100; }
+    .bar { width: 24px; height: 2px; background: white; border-radius: 2px; transition: var(--transition); }
+    .menu-open .bar:nth-child(1) { transform: rotate(45deg) translateY(10px); }
+    .menu-open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .menu-open .bar:nth-child(3) { transform: rotate(-45deg) translateY(-10px); }
+    .mobile-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--dark); z-index: 1050; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 32px; transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1); padding: 80px 24px 40px; }
+    .mobile-menu.open { right: 0; }
+    .mobile-nav-link { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 1.2rem; color: white; letter-spacing: 0.04em; opacity: 0; transform: translateX(30px); transition: color 0.3s ease, opacity 0.4s ease, transform 0.4s ease; }
+    .mobile-menu.open .mobile-nav-link { opacity: 1; transform: translateX(0); }
+    .mobile-menu.open .mobile-nav-link:nth-child(1) { transition-delay: 0.2s; } .mobile-menu.open .mobile-nav-link:nth-child(2) { transition-delay: 0.26s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(3) { transition-delay: 0.32s; } .mobile-menu.open .mobile-nav-link:nth-child(4) { transition-delay: 0.38s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(5) { transition-delay: 0.44s; } .mobile-menu.open .mobile-nav-link:nth-child(6) { transition-delay: 0.50s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(7) { transition-delay: 0.56s; } .mobile-menu.open .mobile-nav-link:nth-child(8) { transition-delay: 0.62s; }
+    .mobile-nav-link:hover { color: var(--accent); }
+    .mobile-menu-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 36px; border-radius: var(--radius-pill); opacity: 0; transform: translateX(30px); transition: opacity 0.4s ease 0.68s, transform 0.4s ease 0.68s; }
+    .mobile-menu.open .mobile-menu-cta { opacity: 1; transform: translateX(0); }
+
+    /* PAGE HERO */
+    .page-hero { background: var(--navy-gradient); min-height: 50vh; display: flex; align-items: flex-end; padding-bottom: 64px; padding-top: calc(var(--nav-height) + 48px); position: relative; overflow: hidden; }
+    .page-hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(201,168,76,0.07) 1px, transparent 1px); background-size: 32px 32px; }
+    .page-hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .breadcrumb { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,0.5); transition: color 0.3s ease; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: rgba(255,255,255,0.8); margin: 0 8px; }
+    .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); color: white; letter-spacing: 0.04em; margin-bottom: 16px; animation: fadeInUp 0.6s ease both; }
+    .page-subtitle { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 1.05rem; color: var(--accent); animation: fadeInUp 0.6s ease 0.2s both; }
+    .page-hero-divider { width: 60px; height: 2px; background: var(--gold-gradient); margin: 20px 0; background-size: 200% auto; animation: goldShimmer 4s linear infinite; }
+
+    /* CONTENT */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-label { display: inline-flex; align-items: center; gap: 10px; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 16px; }
+    .section-label::before { content: ''; display: block; width: 40px; height: 2px; background: var(--gold-gradient); }
+    .section-h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--dark); margin-bottom: 24px; line-height: 1.3; }
+    .section-h2.white { color: white; }
+    .body-text { font-family: 'Open Sans', sans-serif; font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 16px; }
+    .body-text.dark { color: rgba(255,255,255,0.7); }
+
+    /* ABOUT CONTENT SECTIONS */
+    .content-section { padding: 80px 0; }
+    .content-section.alt { background: #F8F9FB; }
+    .content-section.warm { background: #FFFFFF; }
+    .content-section.navy { background: var(--primary); }
+    .content-section.dark { background: var(--dark); }
+
+    /* 2-COL LAYOUT */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .two-col.narrow { grid-template-columns: 58% 42%; }
+
+    /* MISSION PILLARS */
+    .pillars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+    .pillar-card { background: white; border-radius: var(--radius-md); padding: 28px; border-left: 4px solid var(--accent); box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .pillar-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .pillar-icon { width: 48px; height: 48px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .pillar-icon i { color: var(--accent); font-size: 1.1rem; }
+    .pillar-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.9rem; color: var(--primary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .pillar-desc { font-family: 'Open Sans', sans-serif; font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* KEY FACTS */
+    .facts-card { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: var(--radius-lg); padding: 36px; }
+    .fact-item { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .fact-item:last-child { border-bottom: none; }
+    .fact-icon { color: var(--accent); font-size: 0.9rem; margin-top: 3px; flex-shrink: 0; }
+    .fact-label { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 2px; }
+    .fact-value { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted); }
+
+    /* ADVANTAGES LIST */
+    .adv-list { display: flex; flex-direction: column; gap: 16px; }
+    .adv-item { display: flex; gap: 14px; align-items: flex-start; background: rgba(255,255,255,0.04); border-radius: var(--radius-md); padding: 16px; border: 1px solid rgba(201,168,76,0.08); }
+    .adv-item i { color: var(--accent); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
+    .adv-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.88rem; color: white; margin-bottom: 4px; }
+    .adv-desc { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+    /* TEAM */
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+    .team-card { background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); text-align: center; }
+    .team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .team-photo { width: 100%; aspect-ratio: 1; background: var(--navy-gradient); display: flex; align-items: center; justify-content: center; }
+    .team-initials { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2rem; color: var(--accent); }
+    .team-body { padding: 24px; }
+    .team-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--primary); margin-bottom: 6px; }
+    .team-title { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 0.82rem; color: var(--accent); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .team-bio { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* PARTNERS */
+    .partners-static { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+    .partner-badge { display: inline-flex; align-items: center; padding: 10px 20px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: white; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.8rem; color: var(--dark); transition: var(--transition); }
+    .partner-badge:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ARBITRATION DETAILS */
+    .arb-count-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+    .arb-card { background: var(--primary-light); border-radius: var(--radius-md); padding: 24px; border-top: 3px solid var(--accent); }
+    .arb-card-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 10px; }
+    .arb-card-body { font-family: 'Open Sans', sans-serif; font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* FACTORS LIST */
+    .factors-list { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+    .factor-item { display: flex; gap: 10px; align-items: flex-start; }
+    .factor-item i { color: var(--accent); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0; }
+    .factor-text { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* QUOTE */
+    .quote-block { background: var(--primary); border-radius: var(--radius-lg); padding: 40px; position: relative; margin: 40px 0; overflow: hidden; }
+    .quote-block::before { content: '\201C'; position: absolute; top: -10px; left: 20px; font-family: 'Montserrat', sans-serif; font-size: 8rem; color: rgba(201,168,76,0.15); line-height: 1; }
+    .quote-text { font-family: 'Montserrat', sans-serif; font-style: italic; font-size: 1.15rem; color: white; line-height: 1.85; position: relative; z-index: 1; }
+    .quote-author { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 0.82rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 16px; }
+
+    /* FLOATING ELEMENTS */
+    .float-file-btn { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 900; writing-mode: vertical-rl; background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 20px 12px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); transition: var(--transition); box-shadow: var(--shadow-md); }
+    .float-file-btn:hover { padding-left: 18px; box-shadow: var(--shadow-gold); }
+    .back-top { position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.9rem; box-shadow: var(--shadow-md); transition: var(--transition); opacity: 0; pointer-events: none; z-index: 900; cursor: pointer; border: none; }
+    .back-top.visible { opacity: 1; pointer-events: all; }
+    .back-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
+
+    /* BUTTONS */
+    .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 28px; border-radius: var(--radius-pill); transition: var(--transition); }
+    .btn-gold:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .btn-outline-navy { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--primary); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 28px; border-radius: var(--radius-pill); transition: var(--transition); }
+    .btn-outline-navy:hover { background: var(--primary); color: white; }
+
+    /* FOOTER */
+    .footer { background: var(--dark); padding-top: 80px; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .footer-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--accent); margin-bottom: 6px; }
+    .footer-brand-sub { font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.5; margin-bottom: 16px; max-width: 200px; }
+    .footer-brand-desc { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-icon { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid rgba(201,168,76,0.4); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.85rem; transition: var(--transition); }
+    .social-icon:hover { background: var(--accent); color: var(--dark); border-color: var(--accent); }
+    .footer-col-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 20px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-link { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.65); transition: color 0.3s ease; }
+    .footer-link:hover { color: var(--accent); }
+    .footer-contact-item { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+    .footer-contact-icon { color: var(--accent); font-size: 0.85rem; margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-text { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.55; }
+    .footer-contact-text a { color: rgba(255,255,255,0.65); transition: color 0.3s ease; }
+    .footer-contact-text a:hover { color: var(--accent); }
+    .footer-bottom { padding: 24px 0; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-family: 'Open Sans', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+    .footer-authority { font-family: 'Open Sans', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 1024px) { .footer-top { grid-template-columns: 1fr 1fr; } .team-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) {
+      :root { --nav-height: 64px; }
+      .nav-links { display: none; } .nav-cta { display: none; } .hamburger { display: flex; }
+      .two-col { grid-template-columns: 1fr; } .pillars-grid { grid-template-columns: 1fr; }
+      .arb-count-grid { grid-template-columns: 1fr; } .team-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; } .footer-bottom { flex-direction: column; }
+      .float-file-btn { display: none; }
+    }
+  </style>
+  <link rel="icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-180x180.png" />
 </head>
 <body>
   <!-- NAVBAR -->
@@ -80,7 +295,7 @@
           <p class="body-text">ICAMEK is an appointing authority that was issued with an instrument to appoint Arbitrators and Conciliators by the Minister of Justice and Constitutional Affairs on 23rd April 2019.</p>
           <p class="body-text">ICAMEK provides dispute resolution services to Ugandan parties and the international business communities who wish to have their disputes resolved outside of the public courtroom. The Centre is an independent, non-profit company limited by guarantee.</p>
           <p class="body-text">It promotes arbitration to the Ugandan business community as an effective alternative to litigation, and Uganda to the world as an investment hub and a place to conduct international arbitration.</p>
-          <p class="body-text">ICAMEK was established to address the growing number of commercial disputes and the huge case backlog within the courts  offering a faster, more confidential, and more flexible path to resolution for businesses, professionals, and governments.</p>
+          <p class="body-text">ICAMEK was established to address the growing number of commercial disputes and the huge case backlog within the courts ┬¥ offering a faster, more confidential, and more flexible path to resolution for businesses, professionals, and governments.</p>
           <p class="body-text">The Centre was officially launched on 25 April 2019 at Trust Tower, Nakasero, by Deputy Chief Justice Richard Buteera, with Hon. Kahinda Otafiire, Minister of Justice, in attendance.</p>
         </div>
         <div class="reveal-right">
@@ -117,7 +332,7 @@
               <i class="fas fa-landmark fact-icon"></i>
               <div>
                 <div class="fact-label">Official Launch</div>
-                <div class="fact-value">25 April 2019  Trust Tower, Nakasero</div>
+                <div class="fact-value">25 April 2019 ┬¥ Trust Tower, Nakasero</div>
               </div>
             </div>
             <div class="fact-item">
@@ -187,7 +402,7 @@
           <div class="section-label">Venue & Facilities</div>
           <h2 class="section-h2">Our Premises</h2>
           <p class="body-text">The Centre's premises offers a modern, centrally located and affordable venue for arbitration, mediation, other dispute hearings, and for meetings. It is an ideal venue for dispute resolution hearings or private meetings.</p>
-          <p class="body-text">Located at 4th Floor, Trust Tower, Nakasero Road  one of Kampala's most prestigious business addresses  ICAMEK's facilities are designed to facilitate professional, confidential dispute resolution proceedings.</p>
+          <p class="body-text">Located at 4th Floor, Trust Tower, Nakasero Road ┬¥ one of Kampala's most prestigious business addresses ┬¥ ICAMEK's facilities are designed to facilitate professional, confidential dispute resolution proceedings.</p>
           <div style="margin-top: 24px; padding: 20px; background: var(--primary-light); border-radius: var(--radius-md); border-left: 4px solid var(--accent);">
             <div style="font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.82rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Location</div>
             <div style="font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted);">4th Floor, Trust Tower<br>Nakasero Road, Kampala, Uganda</div>
@@ -220,11 +435,11 @@
         <div class="factors-list" style="columns: 2; column-gap: 32px;">
           <div class="factor-item">
             <i class="fas fa-check-circle"></i>
-            <span class="factor-text" style="color: rgba(255,255,255,0.7);">The nature and circumstances of the dispute  this informs the type of expertise or specialisation required</span>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">The nature and circumstances of the dispute ┬¥ this informs the type of expertise or specialisation required</span>
           </div>
           <div class="factor-item">
             <i class="fas fa-check-circle"></i>
-            <span class="factor-text" style="color: rgba(255,255,255,0.7);">Previous experience as an arbitrator  important for sole arbitrators or chairpersons to manage the process efficiently</span>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">Previous experience as an arbitrator ┬¥ important for sole arbitrators or chairpersons to manage the process efficiently</span>
           </div>
           <div class="factor-item">
             <i class="fas fa-check-circle"></i>
@@ -232,15 +447,15 @@
           </div>
           <div class="factor-item">
             <i class="fas fa-check-circle"></i>
-            <span class="factor-text" style="color: rgba(255,255,255,0.7);">The arbitrator's availability  must have time to decide within the stipulated timeline</span>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">The arbitrator's availability ┬¥ must have time to decide within the stipulated timeline</span>
           </div>
           <div class="factor-item">
             <i class="fas fa-check-circle"></i>
-            <span class="factor-text" style="color: rgba(255,255,255,0.7);">Tribunal balance  balance expertise, qualifications, seniority, language and other relevant factors</span>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">Tribunal balance ┬¥ balance expertise, qualifications, seniority, language and other relevant factors</span>
           </div>
           <div class="factor-item">
             <i class="fas fa-check-circle"></i>
-            <span class="factor-text" style="color: rgba(255,255,255,0.7);">Diversity  where there are many arbitrators of similar qualifications, the Board actively considers diversity of gender, age and national origin</span>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">Diversity ┬¥ where there are many arbitrators of similar qualifications, the Board actively considers diversity of gender, age and national origin</span>
           </div>
         </div>
       </div>
@@ -312,7 +527,7 @@
         <div class="reveal-right">
           <div class="quote-block">
             <p class="quote-text">"ICAMEK's mediation focuses primarily on the needs and interests of the parties and is an interactive process whereby the mediator provides expertise and support to parties who wish to reach agreement."</p>
-            <div class="quote-author"> ICAMEK, About Mediation</div>
+            <div class="quote-author">┬¥ ICAMEK, About Mediation</div>
           </div>
           <div style="margin-top: 24px;">
             <div class="section-label">Download Forms</div>
@@ -399,7 +614,8 @@
     </div>
   </section>
 
-  <!--  <footer class="footer">
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <div>
@@ -435,45 +651,17 @@
         </div>
         <div>
           <div class="footer-col-title">Contact</div>
-          <div class="footer-contact-item">
-            <i class="fas fa-map-marker-alt footer-contact-icon"></i>
-            <div class="footer-contact-text">4th Floor, Trust Tower, Nakasero Road, Kampala, Uganda</div>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-envelope footer-contact-icon"></i>
-            <div class="footer-contact-text"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-folder-open footer-contact-icon"></i>
-            <div class="footer-contact-text"><a href="mailto:file@icamek.org">file@icamek.org</a><br><span style="font-size: 0.78rem; color: rgba(255,255,255,0.4);">For filing cases</span></div>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-clock footer-contact-icon"></i>
-            <div class="footer-contact-text">Monday Friday, 9:00 AM 5:00 PM</div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-partners">
-        <div class="footer-partners-title">Founding Partners & Supporters</div>
-        <div class="footer-partners-logos">
-          <div class="footer-partner-logo"><span>Uganda Law Society</span></div>
-          <div class="footer-partner-logo"><span>Uganda Bankers' Association</span></div>
-          <div class="footer-partner-logo"><span>Private Sector Foundation Uganda</span></div>
-          <div class="footer-partner-logo"><span>Bank of Uganda</span></div>
-          <div class="footer-partner-logo"><span>Uganda Insurers Association</span></div>
-          <div class="footer-partner-logo"><span>Justice, Law & Order Sector</span></div>
-          <div class="footer-partner-logo"><span>Uganda Judiciary</span></div>
-          <div class="footer-partner-logo"><span>Ministry of Justice</span></div>
-          <div class="footer-partner-logo"><span>KACITA</span></div>
-          <div class="footer-partner-logo"><span>ICPAU</span></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt footer-contact-icon"></i><div class="footer-contact-text">4th Floor, Trust Tower, Nakasero Road, Kampala, Uganda</div></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div></div>
+          <div class="footer-contact-item"><i class="fas fa-folder-open footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:file@icamek.org">file@icamek.org</a></div></div>
+          <div class="footer-contact-item"><i class="fas fa-clock footer-contact-icon"></i><div class="footer-contact-text">Mon9:00 AM 5:00 PM</div></div>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="footer-copy">2026 International Centre for Arbitration and Mediation in Kampala (ICAMEK). All rights reserved.</div>
-        <div class="footer-authority">An Appointing Authority by the Minister of Justice &mdash; Instrument issued 23 April 2019</div>
+        <div class="footer-authority">An Appointing Authority by the Minister of Justice ┬¥ Instrument issued 23 April 2019</div>
       </div>
     </div>
-  </footer>>
   </footer>
 
   <a href="contact.html#file-a-case" class="float-file-btn" aria-label="File a Case">File a Case</a>
@@ -497,5 +685,4 @@
   </script>
 </body>
 </html>
-
 

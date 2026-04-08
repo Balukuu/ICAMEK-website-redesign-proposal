@@ -99,18 +99,91 @@
     </div>
   </main>
 
-  <!-- MINI FOOTER -->
   <footer class="footer">
-    <div class="footer-bottom">
-      <div class="footer-mini-brand">ICAMEK</div>
-      <div class="footer-copy">2026 International Centre for Arbitration and Mediation in Kampala. All rights reserved.</div>
-      <div class="footer-copy">
-        <a href="mailto:admin@icamek.org" style="color: rgba(201,168,76,0.7);">admin@icamek.org</a>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">ICAMEK</div>
+          <div class="footer-brand-sub">International Centre for Arbitration and Mediation in Kampala</div>
+          <p class="footer-brand-desc">Uganda's first private sector-led institution for world-class Alternative Dispute Resolution.</p>
+          <div class="footer-social">
+            <a href="https://ug.linkedin.com/company/international-centre-for-arbitration-and-mediation-in-kampala" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/ICAMEKUG/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html#arbitration" class="footer-link">Arbitration</a></li>
+            <li><a href="services.html#mediation" class="footer-link">Mediation</a></li>
+            <li><a href="services.html#conciliation" class="footer-link">Conciliation</a></li>
+            <li><a href="training.html" class="footer-link">Training</a></li>
+            <li><a href="services.html#venue" class="footer-link">Venue & Facilities</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="arbitration-rules.html" class="footer-link">Arbitration Rules</a></li>
+            <li><a href="mediation-rules.html" class="footer-link">Mediation Rules</a></li>
+            <li><a href="news.html" class="footer-link">News & Events</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+            <div class="footer-contact-text">4th Floor, Trust Tower, Nakasero Road, Kampala, Uganda</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope footer-contact-icon"></i>
+            <div class="footer-contact-text"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-folder-open footer-contact-icon"></i>
+            <div class="footer-contact-text"><a href="mailto:file@icamek.org">file@icamek.org</a><br><span style="font-size: 0.78rem; color: rgba(255,255,255,0.4);">For filing cases</span></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock footer-contact-icon"></i>
+            <div class="footer-contact-text">Monday Friday, 9:00 AM 5:00 PM</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-partners">
+        <div class="footer-partners-title">Founding Partners & Supporters</div>
+        <div class="footer-partners-logos">
+          <div class="footer-partner-logo"><span>Uganda Law Society</span></div>
+          <div class="footer-partner-logo"><span>Uganda Bankers' Association</span></div>
+          <div class="footer-partner-logo"><span>Private Sector Foundation Uganda</span></div>
+          <div class="footer-partner-logo"><span>Bank of Uganda</span></div>
+          <div class="footer-partner-logo"><span>Uganda Insurers Association</span></div>
+          <div class="footer-partner-logo"><span>Justice, Law & Order Sector</span></div>
+          <div class="footer-partner-logo"><span>Uganda Judiciary</span></div>
+          <div class="footer-partner-logo"><span>Ministry of Justice</span></div>
+          <div class="footer-partner-logo"><span>KACITA</span></div>
+          <div class="footer-partner-logo"><span>ICPAU</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">2026 International Centre for Arbitration and Mediation in Kampala (ICAMEK). All rights reserved.</div>
+        <div class="footer-authority">An Appointing Authority by the Minister of Justice &mdash; Instrument issued 23 April 2019</div>
       </div>
     </div>
   </footer>
 
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
   <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+      const backTop = document.getElementById('backTop');
+      if (window.scrollY > 500) backTop.classList.add('visible'); else backTop.classList.remove('visible');
+    });
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
@@ -125,16 +198,10 @@
         document.body.style.overflow = '';
       });
     });
-
-    // Auto-redirect countdown (optional UX touch)
-    let countdown = 30;
-    const interval = setInterval(() => {
-      countdown--;
-      if (countdown <= 0) {
-        clearInterval(interval);
-        window.location.href = 'index.html';
-      }
-    }, 1000);
+    document.getElementById('backTop').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>
