@@ -736,12 +736,19 @@ ul { list-style: none; }
 
 .cookie-banner {
   position: fixed; bottom: 0; left: 0; right: 0;
-  background: var(--dark); border-left: 4px solid var(--accent);
-  padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 16px; z-index: 2000; box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+  background: var(--dark); border-top: 2px solid var(--accent);
+  padding: 20px 24px; display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: 20px; z-index: 2000; box-shadow: 0 -10px 40px rgba(0,0,0,0.4);
   transition: transform 0.4s ease;
+  text-align: center;
 }
 .cookie-banner.hidden { transform: translateY(100%); }
+.cookie-text { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.8); max-width: 800px; }
+.cookie-btns { display: flex; gap: 12px; }
+.cookie-btn { padding: 8px 20px; border-radius: var(--radius-pill); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; cursor: pointer; transition: var(--transition); border: none; }
+.cookie-btn.accept { background: var(--gold-gradient); color: var(--primary); }
+.cookie-btn.more { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.3); }
+.cookie-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
 
 /* 
 ================================================================
@@ -798,6 +805,7 @@ RESPONSIVE BREAKPOINTS
   .footer-social { justify-content: center; }
   .footer-contact-item { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; align-items: center; }
+  .footer-authority { margin-top: 8px; text-align: center; width: 100%; }
   
   .float-file-btn { display: none; }
 }
