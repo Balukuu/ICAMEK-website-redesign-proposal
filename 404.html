@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404  Page Not Found | ICAMEK</title>
+  <meta name="description" content="The page you are looking for could not be found. Return to the ICAMEK homepage.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ===== HIDE SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    html {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+      overflow-x: hidden;
+      width: 100%;
+    }
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    :root {
+      --primary: #1A2E4A; --primary-dark: #0D1B2E;
+      --accent: #C9A84C; --accent-light: rgba(201,168,76,0.15);
+      --dark: #0D1B2E; --text: #1A1A2E; --text-muted: #5A6A7A;
+      --surface: #FFFFFF; --border: #E8ECF2;
+      --gold-gradient: linear-gradient(135deg, #C9A84C 0%, #E8D08A 50%, #C9A84C 100%);
+      --navy-gradient: linear-gradient(135deg, #0D1B2E 0%, #1A2E4A 100%);
+      --shadow-sm: 0 2px 12px rgba(26,46,74,0.07); --shadow-md: 0 8px 40px rgba(26,46,74,0.10);
+      --shadow-gold: 0 4px 24px rgba(201,168,76,0.28);
+      --radius-md: 10px; --radius-lg: 20px; --radius-pill: 999px;
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); --nav-height: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--dark); line-height: 1.8; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column; }
+    a { text-decoration: none; color: inherit; } ul { list-style: none; }
+
+    @keyframes goldShimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-16px); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+    @keyframes gridPan { 0% { background-position: 0 0; } 100% { background-position: 32px 32px; } }
+
+    /* NAVBAR */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000; background: rgba(13,27,46,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.1); box-shadow: var(--shadow-md); }
+    .navbar-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; }
+    .nav-brand img { max-height: 44px; max-width: 220px; object-fit: contain; }
+    .nav-brand-text { display: none; }
+    .nav-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent); line-height: 1.1; letter-spacing: 0.04em; }
+    .nav-brand-sub { font-family: 'Open Sans', sans-serif; font-size: 0.55rem; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; text-transform: uppercase; max-width: 180px; line-height: 1.3; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-link { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.8); padding: 8px 10px; transition: var(--transition); white-space: nowrap; }
+    .nav-link:hover { color: var(--accent); }
+    .nav-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 10px 20px; border-radius: var(--radius-pill); transition: var(--transition); flex-shrink: 0; }
+    .nav-cta:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 1100; }
+    .bar { width: 24px; height: 2px; background: white; border-radius: 2px; transition: var(--transition); }
+    .menu-open .bar:nth-child(1) { transform: rotate(45deg) translateY(10px); }
+    .menu-open .bar:nth-child(2) { opacity: 0; }
+    .menu-open .bar:nth-child(3) { transform: rotate(-45deg) translateY(-10px); }
+    .mobile-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--dark); z-index: 1050; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 32px; transition: right 0.4s cubic-bezier(0.4,0,0.2,1); padding: 80px 24px; }
+    .mobile-menu.open { right: 0; }
+    .mobile-nav-link { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 1.2rem; color: white; opacity: 0; transform: translateX(30px); transition: color 0.3s ease, opacity 0.4s ease, transform 0.4s ease; }
+    .mobile-menu.open .mobile-nav-link { opacity: 1; transform: translateX(0); }
+    .mobile-menu.open .mobile-nav-link:nth-child(1) { transition-delay: 0.2s; } .mobile-menu.open .mobile-nav-link:nth-child(2) { transition-delay: 0.26s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(3) { transition-delay: 0.32s; } .mobile-menu.open .mobile-nav-link:nth-child(4) { transition-delay: 0.38s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(5) { transition-delay: 0.44s; } .mobile-menu.open .mobile-nav-link:nth-child(6) { transition-delay: 0.50s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(7) { transition-delay: 0.56s; } .mobile-menu.open .mobile-nav-link:nth-child(8) { transition-delay: 0.62s; }
+    .mobile-nav-link:hover { color: var(--accent); }
+    .mobile-menu-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 36px; border-radius: var(--radius-pill); opacity: 0; transition: opacity 0.4s ease 0.68s; }
+    .mobile-menu.open .mobile-menu-cta { opacity: 1; }
+
+    /* HERO 404 */
+    .hero-404 {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: calc(var(--nav-height) + 60px) 24px 80px;
+      background: var(--navy-gradient);
+    }
+    .hero-404-bg {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(201,168,76,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      animation: gridPan 8s linear infinite;
+    }
+    .hero-404-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero-404-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 700px;
+      animation: fadeInUp 0.8s cubic-bezier(0.4,0,0.2,1) both;
+    }
+
+    /* GAVEL ICON */
+    .gavel-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.1);
+      border: 1.5px solid rgba(201,168,76,0.25);
+      margin: 0 auto 32px;
+      animation: float 4s ease-in-out infinite;
+    }
+    .gavel-wrap i { font-size: 3rem; color: var(--accent); }
+
+    /* 404 NUM */
+    .num-404 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: clamp(5rem, 18vw, 10rem);
+      line-height: 1;
+      background: var(--gold-gradient);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: goldShimmer 4s linear infinite;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .divider-line {
+      width: 60px;
+      height: 2px;
+      background: var(--gold-gradient);
+      margin: 20px auto;
+      background-size: 200% auto;
+      animation: goldShimmer 4s linear infinite;
+    }
+
+    .heading-404 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      color: white;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .sub-404 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+
+    /* CTA BUTTONS */
+    .cta-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-gradient);
+      color: var(--primary-dark);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 13px 28px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+    }
+    .btn-gold:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 13px 28px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+
+    /* QUICK LINKS */
+    .quick-links-title {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 20px;
+    }
+    .quick-links {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .quick-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: var(--radius-pill);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      transition: var(--transition);
+    }
+    .quick-link:hover { border-color: var(--accent); color: var(--accent); background: rgba(201,168,76,0.05); }
+    .quick-link i { font-size: 0.75rem; }
+
+    /* FOOTER */
+    .footer { background: var(--dark); padding-top: 56px; border-top: 1px solid rgba(201,168,76,0.1); }
+    .footer-bottom { padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+    .footer-copy { font-family: 'Open Sans', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+    .footer-mini-brand { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--accent); letter-spacing: 0.06em; }
+
+    @media (max-width: 768px) {
+      :root { --nav-height: 64px; }
+      .nav-links { display: none; } .nav-cta { display: none; } .hamburger { display: flex; }
+      .num-404 { font-size: clamp(5rem, 25vw, 8rem); }
+      .cta-group { flex-direction: column; align-items: center; }
+      .btn-gold, .btn-outline-white { width: 100%; max-width: 300px; justify-content: center; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+  <link rel="icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-180x180.png" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://icamek.org/wp-content/uploads/2021/11/icamek-logo-white.png" alt="ICAMEK Logo" onerror="this.style.display='none'">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">ICAMEK</span>
+          <span class="nav-brand-sub">International Centre for Arbitration & Mediation in Kampala</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="arbitration-rules.html" class="nav-link">Arb. Rules</a></li>
+        <li><a href="mediation-rules.html" class="nav-link">Med. Rules</a></li>
+        <li><a href="training.html" class="nav-link">Training</a></li>
+        <li><a href="news.html" class="nav-link">News</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html#file-a-case" class="nav-cta">File a Case</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About Us</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="arbitration-rules.html" class="mobile-nav-link">Arbitration Rules</a>
+    <a href="mediation-rules.html" class="mobile-nav-link">Mediation Rules</a>
+    <a href="training.html" class="mobile-nav-link">Training</a>
+    <a href="news.html" class="mobile-nav-link">News & Events</a>
+    <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    <a href="contact.html#file-a-case" class="mobile-menu-cta">File a Case</a>
+  </div>
+
+  <!-- 404 HERO -->
+  <main class="hero-404" role="main">
+    <div class="hero-404-bg"></div>
+    <div class="hero-404-glow"></div>
+
+    <div class="hero-404-content">
+      <div class="gavel-wrap" aria-hidden="true">
+        <i class="fas fa-gavel"></i>
+      </div>
+
+      <div class="num-404" aria-label="Error 404">404</div>
+
+      <div class="divider-line"></div>
+
+      <h1 class="heading-404">This Page Cannot Be Found</h1>
+      <p class="sub-404">
+        The page you are looking for may have been moved, renamed, or does not exist.
+        Let us help you find what you need.
+      </p>
+
+      <div class="cta-group">
+        <a href="index.html" class="btn-gold">
+          <i class="fas fa-home"></i> Return to Homepage
+        </a>
+        <a href="contact.html" class="btn-outline-white">
+          <i class="fas fa-envelope"></i> Contact ICAMEK
+        </a>
+      </div>
+
+      <div>
+        <div class="quick-links-title">Or navigate directly to</div>
+        <div class="quick-links">
+          <a href="about.html" class="quick-link"><i class="fas fa-landmark"></i> About Us</a>
+          <a href="services.html" class="quick-link"><i class="fas fa-balance-scale"></i> Our Services</a>
+          <a href="arbitration-rules.html" class="quick-link"><i class="fas fa-gavel"></i> Arbitration Rules</a>
+          <a href="mediation-rules.html" class="quick-link"><i class="fas fa-handshake"></i> Mediation Rules</a>
+          <a href="training.html" class="quick-link"><i class="fas fa-graduation-cap"></i> Training</a>
+          <a href="news.html" class="quick-link"><i class="fas fa-newspaper"></i> News & Events</a>
+          <a href="contact.html#file-a-case" class="quick-link"><i class="fas fa-folder-open"></i> File a Case</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MINI FOOTER -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <div class="footer-mini-brand">ICAMEK</div>
+      <div class="footer-copy">2026 International Centre for Arbitration and Mediation in Kampala. All rights reserved.</div>
+      <div class="footer-copy">
+        <a href="mailto:admin@icamek.org" style="color: rgba(201,168,76,0.7);">admin@icamek.org</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('menu-open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('menu-open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Auto-redirect countdown (optional UX touch)
+    let countdown = 30;
+    const interval = setInterval(() => {
+      countdown--;
+      if (countdown <= 0) {
+        clearInterval(interval);
+        window.location.href = 'index.html';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | ICAMEK  International Centre for Arbitration and Mediation in Kampala</title>
+  <meta name="description" content="Contact ICAMEK  reach our secretariat for arbitration filing, mediation enquiries, training registration and general enquiries. Located at Trust Tower, Nakasero, Kampala.">
+  <meta name="keywords" content="ICAMEK contact, file arbitration Uganda, contact ICAMEK Kampala, ADR enquiry Uganda">
+  <meta property="og:title" content="Contact ICAMEK | File a Case, Enquiries & Location">
+  <meta property="og:url" content="https://icamek.org/contact-us/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://icamek.org/contact-us/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ===== HIDE SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    html {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+      overflow-x: hidden;
+      width: 100%;
+    }
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    :root {
+      --primary: #1A2E4A; --primary-dark: #0D1B2E; --primary-light: rgba(26,46,74,0.08);
+      --accent: #C9A84C; --accent-light: rgba(201,168,76,0.15);
+      --dark: #0D1B2E; --text: #1A1A2E; --text-muted: #5A6A7A;
+      --surface: #FFFFFF; --surface-alt: #FFFFFF; --surface-warm: #FFFFFF; --border: #E8ECF2;
+      --success: #1E8449; --error: #C0392B;
+      --gold-gradient: linear-gradient(135deg, #C9A84C 0%, #E8D08A 50%, #C9A84C 100%);
+      --navy-gradient: linear-gradient(135deg, #0D1B2E 0%, #1A2E4A 100%);
+      --shadow-sm: 0 2px 12px rgba(26,46,74,0.07); --shadow-md: 0 8px 40px rgba(26,46,74,0.10);
+      --shadow-lg: 0 24px 64px rgba(26,46,74,0.14); --shadow-gold: 0 4px 24px rgba(201,168,76,0.28);
+      --radius-sm: 4px; --radius-md: 10px; --radius-lg: 20px; --radius-pill: 999px;
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); --nav-height: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--surface); line-height: 1.8; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; } ul { list-style: none; }
+    @keyframes goldShimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(48px); transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; }
+
+    .navbar { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000; background: rgba(13,27,46,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-bottom: 1px solid rgba(201,168,76,0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .navbar.scrolled { height: 70px; background: rgba(13,27,46,0.95); }
+    .navbar-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .nav-brand img { max-height: 56px; max-width: 260px; object-fit: contain; width: auto; transition: var(--transition); }
+    .nav-brand-text { display: none; }
+    .nav-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent); line-height: 1.1; letter-spacing: 0.04em; }
+    .nav-brand-sub { font-family: 'Open Sans', sans-serif; font-size: 0.55rem; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; text-transform: uppercase; max-width: 180px; line-height: 1.3; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-link { position: relative; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.8); padding: 8px 10px; transition: var(--transition); white-space: nowrap; }
+    .nav-link::after { content: ''; position: absolute; bottom: 4px; left: 10px; width: 0; height: 1.5px; background: var(--gold-gradient); transition: width 0.3s ease; }
+    .nav-link:hover, .nav-link.active { color: var(--accent); }
+    .nav-link:hover::after { width: calc(100% - 20px); }
+    .nav-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 10px 20px; border-radius: var(--radius-pill); transition: var(--transition); flex-shrink: 0; }
+    .nav-cta:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 1100; }
+    .bar { width: 24px; height: 2px; background: white; border-radius: 2px; transition: var(--transition); }
+    .menu-open .bar:nth-child(1) { transform: rotate(45deg) translateY(10px); }
+    .menu-open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .menu-open .bar:nth-child(3) { transform: rotate(-45deg) translateY(-10px); }
+    .mobile-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--dark); z-index: 1050; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 32px; transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1); padding: 80px 24px; }
+    .mobile-menu.open { right: 0; }
+    .mobile-nav-link { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 1.2rem; color: white; opacity: 0; transform: translateX(30px); transition: color 0.3s ease, opacity 0.4s ease, transform 0.4s ease; }
+    .mobile-menu.open .mobile-nav-link { opacity: 1; transform: translateX(0); }
+    .mobile-menu.open .mobile-nav-link:nth-child(1) { transition-delay: 0.2s; } .mobile-menu.open .mobile-nav-link:nth-child(2) { transition-delay: 0.26s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(3) { transition-delay: 0.32s; } .mobile-menu.open .mobile-nav-link:nth-child(4) { transition-delay: 0.38s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(5) { transition-delay: 0.44s; } .mobile-menu.open .mobile-nav-link:nth-child(6) { transition-delay: 0.50s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(7) { transition-delay: 0.56s; } .mobile-menu.open .mobile-nav-link:nth-child(8) { transition-delay: 0.62s; }
+    .mobile-nav-link:hover { color: var(--accent); }
+    .mobile-menu-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 36px; border-radius: var(--radius-pill); opacity: 0; transition: opacity 0.4s ease 0.68s; }
+    .mobile-menu.open .mobile-menu-cta { opacity: 1; }
+
+    .page-hero { background: var(--navy-gradient); min-height: 50vh; display: flex; align-items: flex-end; padding-bottom: 64px; padding-top: calc(var(--nav-height) + 48px); position: relative; overflow: hidden; }
+    .page-hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(201,168,76,0.07) 1px, transparent 1px); background-size: 32px 32px; }
+    .page-hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .breadcrumb { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,0.5); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { margin: 0 8px; color: rgba(255,255,255,0.8); }
+    .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); color: white; letter-spacing: 0.04em; margin-bottom: 16px; animation: fadeInUp 0.6s ease both; }
+    .page-subtitle { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 1.05rem; color: var(--accent); animation: fadeInUp 0.6s ease 0.2s both; }
+    .page-hero-divider { width: 60px; height: 2px; background: var(--gold-gradient); margin: 20px 0; background-size: 200% auto; animation: goldShimmer 4s linear infinite; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-label { display: inline-flex; align-items: center; gap: 10px; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 16px; }
+    .section-label::before { content: ''; display: block; width: 40px; height: 2px; background: var(--gold-gradient); }
+
+    /* CONTACT INFO STRIP */
+    .info-strip { background: var(--primary); padding: 48px 0; }
+    .info-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .info-item { display: flex; gap: 16px; align-items: flex-start; }
+    .info-icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(201,168,76,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .info-icon i { color: var(--accent); font-size: 1rem; }
+    .info-label { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 4px; }
+    .info-value { font-family: 'Open Sans', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.55; }
+    .info-value a { color: rgba(255,255,255,0.75); transition: color 0.3s; }
+    .info-value a:hover { color: var(--accent); }
+
+    /* MAIN SECTION */
+    .contact-section { padding: 80px 0; background: #FFFFFF; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+
+    /* FORMS */
+    .form-section-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--primary); margin-bottom: 8px; }
+    .form-section-sub { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 32px; }
+    .tab-btns { display: flex; gap: 0; margin-bottom: 28px; border-radius: var(--radius-md); overflow: hidden; border: 1.5px solid var(--border); }
+    .tab-btn { flex: 1; padding: 12px; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); background: white; border: none; cursor: pointer; transition: var(--transition); }
+    .tab-btn.active { background: var(--primary); color: white; }
+    .tab-btn:hover:not(.active) { background: #F8F9FB; }
+    .form-tab { display: none; }
+    .form-tab.active { display: block; }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.82rem; color: var(--primary); margin-bottom: 8px; }
+    .form-label .req { color: var(--accent); }
+    .form-control { width: 100%; padding: 12px 16px; font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text); border: 1.5px solid var(--border); border-radius: var(--radius-md); background: white; transition: var(--transition); outline: none; }
+    .form-control:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201,168,76,0.1); }
+    .form-control::placeholder { color: var(--text-muted); }
+    textarea.form-control { min-height: 140px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .btn-submit { width: 100%; padding: 14px; background: var(--gold-gradient); color: var(--dark); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; border: none; border-radius: var(--radius-pill); cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 8px; }
+    .btn-submit:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .form-success { display: none; text-align: center; padding: 40px 24px; background: rgba(30,132,73,0.06); border: 1.5px solid rgba(30,132,73,0.25); border-radius: var(--radius-lg); }
+    .form-success i { font-size: 3rem; color: var(--success); margin-bottom: 16px; display: block; }
+    .form-success h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--success); margin-bottom: 8px; }
+    .form-success p { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted); }
+
+    /* RIGHT COLUMN */
+    .contact-info-col { }
+    .contact-info-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--primary); margin-bottom: 8px; }
+    .contact-info-sub { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 32px; }
+    .contact-details { display: flex; flex-direction: column; gap: 0; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; }
+    .contact-detail { display: flex; gap: 20px; align-items: flex-start; padding: 24px; border-bottom: 1px solid var(--border); }
+    .contact-detail:last-child { border-bottom: none; }
+    .cd-icon { width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--accent-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cd-icon i { color: var(--accent); font-size: 1.1rem; }
+    .cd-label { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 4px; }
+    .cd-value { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--primary); line-height: 1.55; }
+    .cd-value a { color: var(--primary); transition: color 0.3s; }
+    .cd-value a:hover { color: var(--accent); }
+    .cd-note { font-family: 'Open Sans', sans-serif; font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+
+    /* MAP */
+    .map-section { background: #F8F9FB; }
+    .map-wrap { position: relative; }
+
+    /* FILE CASE SECTION */
+    .file-case-section { background: var(--primary); padding: 80px 0; scroll-margin-top: 80px; }
+    .file-case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .file-case-h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(1.6rem, 3vw, 2rem); color: white; margin-bottom: 12px; }
+    .file-case-sub { font-family: 'Open Sans', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.65); margin-bottom: 32px; }
+    .file-steps { display: flex; flex-direction: column; gap: 0; }
+    .file-step { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .file-step:last-child { border-bottom: none; }
+    .file-step-num { width: 40px; height: 40px; border-radius: 50%; background: rgba(201,168,76,0.15); border: 1.5px solid var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--accent); flex-shrink: 0; }
+    .file-step-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.9rem; color: white; margin-bottom: 6px; }
+    .file-step-desc { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+    .file-case-panel { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.2); border-radius: var(--radius-lg); padding: 36px; }
+    .file-case-panel-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--accent); margin-bottom: 24px; }
+    .file-contact-item { display: flex; gap: 14px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .file-contact-item:last-child { border-bottom: none; }
+    .file-contact-item i { color: var(--accent); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
+    .file-contact-label { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+    .file-contact-value { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: white; }
+    .file-contact-value a { color: var(--accent); }
+    .file-doc-links { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
+    .file-doc-link { display: flex; align-items: center; gap: 10px; font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: var(--accent); padding: 10px 0; border-bottom: 1px solid rgba(201,168,76,0.1); transition: gap 0.3s ease; }
+    .file-doc-link:last-child { border-bottom: none; }
+    .file-doc-link:hover { gap: 14px; }
+
+    .float-file-btn { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 900; writing-mode: vertical-rl; background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 20px 12px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); transition: var(--transition); box-shadow: var(--shadow-md); }
+    .float-file-btn:hover { padding-left: 18px; box-shadow: var(--shadow-gold); }
+    .back-top { position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.9rem; box-shadow: var(--shadow-md); transition: var(--transition); opacity: 0; pointer-events: none; z-index: 900; cursor: pointer; border: none; }
+    .back-top.visible { opacity: 1; pointer-events: all; }
+
+    .footer { background: var(--dark); padding-top: 80px; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .footer-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--accent); margin-bottom: 6px; }
+    .footer-brand-sub { font-family: 'Open Sans', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.5; margin-bottom: 16px; max-width: 200px; }
+    .footer-brand-desc { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-icon { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid rgba(201,168,76,0.4); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.85rem; transition: var(--transition); }
+    .social-icon:hover { background: var(--accent); color: var(--dark); border-color: var(--accent); }
+    .footer-col-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 20px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-link { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.65); transition: color 0.3s ease; }
+    .footer-link:hover { color: var(--accent); }
+    .footer-contact-item { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+    .footer-contact-icon { color: var(--accent); font-size: 0.85rem; margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-text { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.55; }
+    .footer-contact-text a { color: rgba(255,255,255,0.65); }
+    .footer-contact-text a:hover { color: var(--accent); }
+    .footer-bottom { padding: 24px 0; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-family: 'Open Sans', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+    .footer-authority { font-family: 'Open Sans', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 1024px) { .info-strip-grid { grid-template-columns: 1fr 1fr; } .contact-grid { grid-template-columns: 1fr; } .file-case-grid { grid-template-columns: 1fr; } .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) { :root { --nav-height: 64px; } .nav-links { display: none; } .nav-cta { display: none; } .hamburger { display: flex; } .info-strip-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .footer-top { grid-template-columns: 1fr; gap: 32px; } .footer-bottom { flex-direction: column; } .float-file-btn { display: none; } }
+  </style>
+  <link rel="icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-180x180.png" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://icamek.org/wp-content/uploads/2021/11/icamek-logo-white.png" alt="ICAMEK Logo" onerror="this.style.display='none'">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">ICAMEK</span>
+          <span class="nav-brand-sub">International Centre for Arbitration & Mediation in Kampala</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="arbitration-rules.html" class="nav-link">Arb. Rules</a></li>
+        <li><a href="mediation-rules.html" class="nav-link">Med. Rules</a></li>
+        <li><a href="training.html" class="nav-link">Training</a></li>
+        <li><a href="news.html" class="nav-link">News</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <a href="#file-a-case" class="nav-cta">File a Case</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About Us</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="arbitration-rules.html" class="mobile-nav-link">Arbitration Rules</a>
+    <a href="mediation-rules.html" class="mobile-nav-link">Mediation Rules</a>
+    <a href="training.html" class="mobile-nav-link">Training</a>
+    <a href="news.html" class="mobile-nav-link">News & Events</a>
+    <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    <a href="#file-a-case" class="mobile-menu-cta">File a Case</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="page-hero-pattern"></div>
+    <div class="page-hero-content">
+<h1 class="page-title">Contact ICAMEK</h1>
+      <div class="page-hero-divider"></div>
+      <p class="page-subtitle">Reach Our Secretariat  Mon to Fri, 9:00 AM to 5:00 PM</p>
+    </div>
+  </section>
+
+  <!-- INFO STRIP -->
+  <section class="info-strip">
+    <div class="container">
+      <div class="info-strip-grid">
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="info-label">Office Address</div>
+            <div class="info-value">4th Floor, Trust Tower<br>Nakasero Road, Kampala, Uganda</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="info-label">General Enquiries</div>
+            <div class="info-value"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-folder-open"></i></div>
+          <div>
+            <div class="info-label">File a Case</div>
+            <div class="info-value"><a href="mailto:file@icamek.org">file@icamek.org</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <div class="info-label">Office Hours</div>
+            <div class="info-value">Monday Friday<br>9:00 AM 5:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORMS -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- FORM COLUMN -->
+        <div class="reveal">
+          <div class="section-label">Get in Touch</div>
+          <div class="form-section-title">Send Us a Message</div>
+          <p class="form-section-sub">Use the form below to get in touch with our secretariat. We respond to all enquiries within 1business days.</p>
+
+          <div class="tab-btns">
+            <button class="tab-btn active" onclick="switchTab('general', this)" id="tab-general">General Enquiry</button>
+            <button class="tab-btn" onclick="switchTab('training', this)" id="tab-training">Training</button>
+            <button class="tab-btn" onclick="switchTab('arbitrator', this)" id="tab-arbitrator">Join Panel</button>
+          </div>
+
+          <!-- GENERAL FORM -->
+          <div class="form-tab active" id="form-general">
+            <form id="generalForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="gen-name">Full Name <span class="req">*</span></label>
+                  <input type="text" id="gen-name" class="form-control" placeholder="e.g. John Mukasa" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="gen-org">Organisation</label>
+                  <input type="text" id="gen-org" class="form-control" placeholder="Your company or firm">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="gen-email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="gen-email" class="form-control" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="gen-phone">Phone Number</label>
+                  <input type="tel" id="gen-phone" class="form-control" placeholder="+256 7xx xxx xxx">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="gen-subject">Subject <span class="req">*</span></label>
+                <select id="gen-subject" class="form-control" required>
+                  <option value="">Select a subject...</option>
+                  <option value="arbitration">Arbitration Enquiry</option>
+                  <option value="mediation">Mediation Enquiry</option>
+                  <option value="conciliation">Conciliation Enquiry</option>
+                  <option value="training">Training Enquiry</option>
+                  <option value="venue">Venue Hire</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="gen-message">Message <span class="req">*</span></label>
+                <textarea id="gen-message" class="form-control" placeholder="Please describe how ICAMEK can assist you..." required></textarea>
+              </div>
+              <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+            <div class="form-success" id="general-success">
+              <i class="fas fa-check-circle"></i>
+              <h3>Message Sent Successfully!</h3>
+              <p>Thank you for contacting ICAMEK. Our secretariat will respond to your enquiry within 1business days.</p>
+            </div>
+          </div>
+
+          <!-- TRAINING FORM -->
+          <div class="form-tab" id="form-training">
+            <form id="trainingForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="tr-name">Full Name <span class="req">*</span></label>
+                  <input type="text" id="tr-name" class="form-control" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="tr-org">Organisation <span class="req">*</span></label>
+                  <input type="text" id="tr-org" class="form-control" placeholder="Your company or firm" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="tr-email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="tr-email" class="form-control" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="tr-phone">Phone Number <span class="req">*</span></label>
+                  <input type="tel" id="tr-phone" class="form-control" placeholder="+256 7xx xxx xxx" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="tr-program">Programme of Interest <span class="req">*</span></label>
+                <select id="tr-program" class="form-control" required>
+                  <option value="">Select a programme...</option>
+                  <option>Construction Claims & Dispute Avoidance</option>
+                  <option>Arbitration Practice & Procedure</option>
+                  <option>Mediation Skills Training</option>
+                  <option>Commercial Dispute Resolution Masterclass</option>
+                  <option>University Moot Competition</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="tr-message">Additional Information</label>
+                <textarea id="tr-message" class="form-control" placeholder="Any questions or additional information..." style="min-height: 100px;"></textarea>
+              </div>
+              <button type="submit" class="btn-submit"><i class="fas fa-graduation-cap"></i> Register Interest</button>
+            </form>
+            <div class="form-success" id="training-success">
+              <i class="fas fa-check-circle"></i>
+              <h3>Registration Received!</h3>
+              <p>Thank you for your interest in ICAMEK's training programs. Our secretariat will be in touch with full details shortly.</p>
+            </div>
+          </div>
+
+          <!-- ARBITRATOR PANEL FORM -->
+          <div class="form-tab" id="form-arbitrator">
+            <form id="arbitratorForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="arb-name">Full Name <span class="req">*</span></label>
+                  <input type="text" id="arb-name" class="form-control" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="arb-title">Professional Title</label>
+                  <input type="text" id="arb-title" class="form-control" placeholder="e.g. Advocate, Engineer, Accountant">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="arb-email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="arb-email" class="form-control" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="arb-phone">Phone Number</label>
+                  <input type="tel" id="arb-phone" class="form-control" placeholder="+256 7xx xxx xxx">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="arb-panel">Panel You Are Applying For <span class="req">*</span></label>
+                <select id="arb-panel" class="form-control" required>
+                  <option value="">Select panel...</option>
+                  <option>Arbitrators Panel</option>
+                  <option>Mediators Panel</option>
+                  <option>Both Arbitrators and Mediators Panels</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="arb-bio">Brief Professional Biography <span class="req">*</span></label>
+                <textarea id="arb-bio" class="form-control" placeholder="Please describe your relevant qualifications, experience and expertise in ADR..." required></textarea>
+              </div>
+              <button type="submit" class="btn-submit"><i class="fas fa-user-plus"></i> Submit Application</button>
+            </form>
+            <div class="form-success" id="arbitrator-success">
+              <i class="fas fa-check-circle"></i>
+              <h3>Application Submitted!</h3>
+              <p>Thank you for your interest in joining the ICAMEK panel. Our appointments team will review your application and contact you within 5 business days.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT INFO COLUMN -->
+        <div class="contact-info-col reveal reveal-delay-2">
+          <div class="section-label">Office Information</div>
+          <div class="contact-info-title">Find & Reach Us</div>
+          <p class="contact-info-sub">Our dedicated team is available to assist with all arbitration, mediation and training enquiries.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="cd-label">Postal / Physical Address</div>
+                <div class="cd-value">4th Floor, Trust Tower<br>Nakasero Road, Kampala, Uganda</div>
+                <div class="cd-note">Centrally located in Kampala's premier business district</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="cd-label">General Enquiries</div>
+                <div class="cd-value"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div>
+                <div class="cd-note">For all general and administrative enquiries</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fas fa-folder-open"></i></div>
+              <div>
+                <div class="cd-label">Case Filing Email</div>
+                <div class="cd-value"><a href="mailto:file@icamek.org">file@icamek.org</a></div>
+                <div class="cd-note">Submit your Request for Arbitration or Mediation here</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <div class="cd-label">Office Hours</div>
+                <div class="cd-value">Monday Friday, 9:00 AM 5:00 PM</div>
+                <div class="cd-note">Closed on public holidays</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <div class="cd-label">LinkedIn</div>
+                <div class="cd-value"><a href="https://ug.linkedin.com/company/international-centre-for-arbitration-and-mediation-in-kampala" target="_blank" rel="noopener noreferrer">ICAMEK on LinkedIn</a></div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon"><i class="fab fa-facebook-f"></i></div>
+              <div>
+                <div class="cd-label">Facebook</div>
+                <div class="cd-value"><a href="https://www.facebook.com/ICAMEKUG/" target="_blank" rel="noopener noreferrer">ICAMEKUG on Facebook</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.753745!2d32.5800!3d0.3166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbc2a8e5b9e99%3A0x7e6ea8c4a9c4b5d0!2sTrust%20Tower%2C%20Nakasero%2C%20Kampala!5e0!3m2!1sen!2sug!4v1680000000000!5m2!1sen!2sug" width="100%" height="420" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ICAMEK Location Map"></iframe>
+  </section>
+
+  <!-- FILE A CASE SECTION -->
+  <section class="file-case-section" id="file-a-case">
+    <div class="container">
+      <div class="section-label" style="color: var(--accent);">File a Case</div>
+      <div class="file-case-grid">
+        <div>
+          <h2 class="file-case-h2">How to File Your Case with ICAMEK</h2>
+          <p class="file-case-sub">Follow these steps to commence arbitration or mediation proceedings under the ICAMEK Rules.</p>
+          <div class="file-steps">
+            <div class="file-step">
+              <div class="file-step-num">01</div>
+              <div>
+                <div class="file-step-title">Download the Request Form</div>
+                <p class="file-step-desc">Download the appropriate form: Request for Arbitration or Request for Mediation from the ICAMEK website.</p>
+              </div>
+            </div>
+            <div class="file-step">
+              <div class="file-step-num">02</div>
+              <div>
+                <div class="file-step-title">Pay the Registration Fee</div>
+                <p class="file-step-desc">Pay the registration fee of UGX 350,000/= and obtain proof of payment to submit with your request.</p>
+              </div>
+            </div>
+            <div class="file-step">
+              <div class="file-step-num">03</div>
+              <div>
+                <div class="file-step-title">Submit Your Request</div>
+                <p class="file-step-desc">Email your completed form and proof of payment to file@icamek.org, or deliver in person to 4th Floor, Trust Tower, Nakasero Road.</p>
+              </div>
+            </div>
+            <div class="file-step">
+              <div class="file-step-num">04</div>
+              <div>
+                <div class="file-step-title">ICAMEK Confirms & Proceeds</div>
+                <p class="file-step-desc">ICAMEK confirms receipt and notifies the Respondent. We then guide all parties through the process to resolution.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="file-case-panel">
+            <div class="file-case-panel-title">Case Filing Details</div>
+            <div class="file-contact-item">
+              <i class="fas fa-coins"></i>
+              <div>
+                <div class="file-contact-label">Registration Fee</div>
+                <div class="file-contact-value">UGX 350,000/= (Arbitration)</div>
+              </div>
+            </div>
+            <div class="file-contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <div class="file-contact-label">Filing Email</div>
+                <div class="file-contact-value"><a href="mailto:file@icamek.org">file@icamek.org</a></div>
+              </div>
+            </div>
+            <div class="file-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <div class="file-contact-label">Physical Submission</div>
+                <div class="file-contact-value">4th Floor, Trust Tower, Nakasero Road, Kampala</div>
+              </div>
+            </div>
+            <div class="file-contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <div class="file-contact-label">Submission Hours</div>
+                <div class="file-contact-value">Mon9:00 AM 5:00 PM</div>
+              </div>
+            </div>
+            <div class="file-doc-links">
+              <a href="https://icamek.org/wp-content/uploads/2022/01/ICAMEK-Request-for-Arbitration_Application-for-appointment-of-Arbitrator-Form.pdf" class="file-doc-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-alt"></i> Request for Arbitration Form <i class="fas fa-arrow-right" style="margin-left: auto;"></i>
+              </a>
+              <a href="https://icamek.org/wp-content/uploads/2022/01/ICAMEK-Request-for-Mediation-application-form.pdf" class="file-doc-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-alt"></i> Request for Mediation Form <i class="fas fa-arrow-right" style="margin-left: auto;"></i>
+              </a>
+              <a href="https://icamek.org/wp-content/uploads/2022/01/ICAMEK-ARBITRATION-RULES-2018.pdf" class="file-doc-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-pdf"></i> ICAMEK Arbitration Rules 2018 <i class="fas fa-arrow-right" style="margin-left: auto;"></i>
+              </a>
+              <a href="https://icamek.org/wp-content/uploads/2022/01/ICAMEK-MEDIATION-RULES-2018.pdf" class="file-doc-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-pdf"></i> ICAMEK Mediation Rules 2018 <i class="fas fa-arrow-right" style="margin-left: auto;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">ICAMEK</div>
+          <div class="footer-brand-sub">International Centre for Arbitration and Mediation in Kampala</div>
+          <p class="footer-brand-desc">Uganda's first private sector-led institution for world-class Alternative Dispute Resolution.</p>
+          <div class="footer-social">
+            <a href="https://ug.linkedin.com/company/international-centre-for-arbitration-and-mediation-in-kampala" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/ICAMEKUG/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html#arbitration" class="footer-link">Arbitration</a></li>
+            <li><a href="services.html#mediation" class="footer-link">Mediation</a></li>
+            <li><a href="services.html#conciliation" class="footer-link">Conciliation</a></li>
+            <li><a href="training.html" class="footer-link">Training & Accreditation</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="arbitration-rules.html" class="footer-link">Arbitration Rules</a></li>
+            <li><a href="mediation-rules.html" class="footer-link">Mediation Rules</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt footer-contact-icon"></i><div class="footer-contact-text">4th Floor, Trust Tower, Nakasero Road, Kampala, Uganda</div></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div></div>
+          <div class="footer-contact-item"><i class="fas fa-folder-open footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:file@icamek.org">file@icamek.org</a></div></div>
+          <div class="footer-contact-item"><i class="fas fa-clock footer-contact-icon"></i><div class="footer-contact-text">Mon9:00 AM 5:00 PM</div></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">2026 International Centre for Arbitration and Mediation in Kampala (ICAMEK). All rights reserved.</div>
+        <div class="footer-authority">An Appointing Authority by the Minister of Justice  Instrument issued 23 April 2019</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+      const backTop = document.getElementById('backTop');
+      if (window.scrollY > 500) backTop.classList.add('visible'); else backTop.classList.remove('visible');
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => { hamburger.classList.toggle('menu-open'); mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : ''; });
+    mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { hamburger.classList.remove('menu-open'); mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }); });
+    document.getElementById('backTop').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    function switchTab(tab, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.form-tab').forEach(f => f.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('form-' + tab).classList.add('active');
+    }
+
+    function handleFormSubmit(formId, successId) {
+      const form = document.getElementById(formId);
+      const success = document.getElementById(successId);
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const required = form.querySelectorAll('[required]');
+        let valid = true;
+        required.forEach(field => {
+          field.style.borderColor = '';
+          if (!field.value.trim()) {
+            field.style.borderColor = '#C0392B';
+            valid = false;
+          }
+        });
+        if (!valid) return;
+        form.style.display = 'none';
+        success.style.display = 'block';
+      });
+    }
+
+    handleFormSubmit('generalForm', 'general-success');
+    handleFormSubmit('trainingForm', 'training-success');
+    handleFormSubmit('arbitratorForm', 'arbitrator-success');
+
+    // Scroll to hash
+    if (window.location.hash === '#file-a-case') {
+      setTimeout(() => {
+        const el = document.getElementById('file-a-case');
+        if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+      }, 500);
+    }
+  </script>
+</body>
+</html>
+

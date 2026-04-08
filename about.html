@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ICAMEK  International Centre for Arbitration and Mediation in Kampala</title>
+  <meta name="description" content="Learn about ICAMEK  Uganda's first private sector-led independent centre for arbitration, mediation and alternative dispute resolution. Incorporated 2018, Kampala.">
+  <meta name="keywords" content="ICAMEK about, arbitration Uganda history, mediation centre Kampala, ADR institution Uganda">
+  <meta property="og:title" content="About ICAMEK | International Centre for Arbitration and Mediation in Kampala">
+  <meta property="og:description" content="ICAMEK is an independent, not-for-profit organisation dedicated to advancing Alternative Dispute Resolution in Uganda and across East Africa.">
+  <meta property="og:url" content="https://icamek.org/about-us/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://icamek.org/about-us/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ===== HIDE SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    html {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+      overflow-x: hidden;
+      width: 100%;
+    }
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    :root {
+      --primary: #1A2E4A; --primary-dark: #0D1B2E; --primary-light: rgba(26,46,74,0.08);
+      --accent: #C9A84C; --accent-dark: #A8873A; --accent-light: rgba(201,168,76,0.15);
+      --secondary: #2E6DA4; --dark: #0D1B2E; --dark-mid: #2C3E50;
+      --text: #1A1A2E; --text-muted: #5A6A7A; --surface: #FFFFFF;
+      --surface-alt: #FFFFFF; --surface-warm: #FFFFFF; --border: #E8ECF2;
+      --gold-gradient: linear-gradient(135deg, #C9A84C 0%, #E8D08A 50%, #C9A84C 100%);
+      --navy-gradient: linear-gradient(135deg, #0D1B2E 0%, #1A2E4A 100%);
+      --shadow-sm: 0 2px 12px rgba(26,46,74,0.07); --shadow-md: 0 8px 40px rgba(26,46,74,0.10);
+      --shadow-lg: 0 24px 64px rgba(26,46,74,0.14); --shadow-gold: 0 4px 24px rgba(201,168,76,0.28);
+      --radius-sm: 4px; --radius-md: 10px; --radius-lg: 20px; --radius-pill: 999px;
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); --nav-height: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--surface); line-height: 1.8; overflow-x: hidden; }
+    img { max-width: 100%; height: auto; } a { text-decoration: none; color: inherit; } ul { list-style: none; }
+
+    @keyframes goldShimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    @keyframes floatScale { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+    .reveal { opacity: 0; transform: translateY(48px); transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-60px); transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1); }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(60px); transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1); }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; } .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* NAVBAR */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000; background: rgba(13,27,46,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-bottom: 1px solid rgba(201,168,76,0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .navbar.scrolled { height: 70px; background: rgba(13,27,46,0.95); }
+    .navbar-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .nav-brand img { max-height: 56px; max-width: 260px; object-fit: contain; width: auto; transition: var(--transition); }
+    .nav-brand-text { display: none; }
+    .nav-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent); line-height: 1.1; letter-spacing: 0.04em; }
+    .nav-brand-sub { font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 0.55rem; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; text-transform: uppercase; max-width: 180px; line-height: 1.3; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-link { position: relative; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.8); padding: 8px 10px; transition: var(--transition); white-space: nowrap; }
+    .nav-link::after { content: ''; position: absolute; bottom: 4px; left: 10px; width: 0; height: 1.5px; background: var(--gold-gradient); transition: width 0.3s ease; }
+    .nav-link:hover { color: var(--accent); }
+    .nav-link:hover::after { width: calc(100% - 20px); }
+    .nav-link.active { color: var(--accent); }
+    .nav-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 10px 20px; border-radius: var(--radius-pill); transition: var(--transition); white-space: nowrap; flex-shrink: 0; }
+    .nav-cta:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 1100; }
+    .bar { width: 24px; height: 2px; background: white; border-radius: 2px; transition: var(--transition); }
+    .menu-open .bar:nth-child(1) { transform: rotate(45deg) translateY(10px); }
+    .menu-open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .menu-open .bar:nth-child(3) { transform: rotate(-45deg) translateY(-10px); }
+    .mobile-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--dark); z-index: 1050; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 32px; transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1); padding: 80px 24px 40px; }
+    .mobile-menu.open { right: 0; }
+    .mobile-nav-link { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 1.2rem; color: white; letter-spacing: 0.04em; opacity: 0; transform: translateX(30px); transition: color 0.3s ease, opacity 0.4s ease, transform 0.4s ease; }
+    .mobile-menu.open .mobile-nav-link { opacity: 1; transform: translateX(0); }
+    .mobile-menu.open .mobile-nav-link:nth-child(1) { transition-delay: 0.2s; } .mobile-menu.open .mobile-nav-link:nth-child(2) { transition-delay: 0.26s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(3) { transition-delay: 0.32s; } .mobile-menu.open .mobile-nav-link:nth-child(4) { transition-delay: 0.38s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(5) { transition-delay: 0.44s; } .mobile-menu.open .mobile-nav-link:nth-child(6) { transition-delay: 0.50s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(7) { transition-delay: 0.56s; } .mobile-menu.open .mobile-nav-link:nth-child(8) { transition-delay: 0.62s; }
+    .mobile-nav-link:hover { color: var(--accent); }
+    .mobile-menu-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 36px; border-radius: var(--radius-pill); opacity: 0; transform: translateX(30px); transition: opacity 0.4s ease 0.68s, transform 0.4s ease 0.68s; }
+    .mobile-menu.open .mobile-menu-cta { opacity: 1; transform: translateX(0); }
+
+    /* PAGE HERO */
+    .page-hero { background: var(--navy-gradient); min-height: 50vh; display: flex; align-items: flex-end; padding-bottom: 64px; padding-top: calc(var(--nav-height) + 48px); position: relative; overflow: hidden; }
+    .page-hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(201,168,76,0.07) 1px, transparent 1px); background-size: 32px 32px; }
+    .page-hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .breadcrumb { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,0.5); transition: color 0.3s ease; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: rgba(255,255,255,0.8); margin: 0 8px; }
+    .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); color: white; letter-spacing: 0.04em; margin-bottom: 16px; animation: fadeInUp 0.6s ease both; }
+    .page-subtitle { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 1.05rem; color: var(--accent); animation: fadeInUp 0.6s ease 0.2s both; }
+    .page-hero-divider { width: 60px; height: 2px; background: var(--gold-gradient); margin: 20px 0; background-size: 200% auto; animation: goldShimmer 4s linear infinite; }
+
+    /* CONTENT */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-label { display: inline-flex; align-items: center; gap: 10px; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 16px; }
+    .section-label::before { content: ''; display: block; width: 40px; height: 2px; background: var(--gold-gradient); }
+    .section-h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--dark); margin-bottom: 24px; line-height: 1.3; }
+    .section-h2.white { color: white; }
+    .body-text { font-family: 'Open Sans', sans-serif; font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 16px; }
+    .body-text.dark { color: rgba(255,255,255,0.7); }
+
+    /* ABOUT CONTENT SECTIONS */
+    .content-section { padding: 80px 0; }
+    .content-section.alt { background: #F8F9FB; }
+    .content-section.warm { background: #FFFFFF; }
+    .content-section.navy { background: var(--primary); }
+    .content-section.dark { background: var(--dark); }
+
+    /* 2-COL LAYOUT */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .two-col.narrow { grid-template-columns: 58% 42%; }
+
+    /* MISSION PILLARS */
+    .pillars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+    .pillar-card { background: white; border-radius: var(--radius-md); padding: 28px; border-left: 4px solid var(--accent); box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .pillar-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .pillar-icon { width: 48px; height: 48px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .pillar-icon i { color: var(--accent); font-size: 1.1rem; }
+    .pillar-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.9rem; color: var(--primary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .pillar-desc { font-family: 'Open Sans', sans-serif; font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* KEY FACTS */
+    .facts-card { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: var(--radius-lg); padding: 36px; }
+    .fact-item { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .fact-item:last-child { border-bottom: none; }
+    .fact-icon { color: var(--accent); font-size: 0.9rem; margin-top: 3px; flex-shrink: 0; }
+    .fact-label { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 2px; }
+    .fact-value { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted); }
+
+    /* ADVANTAGES LIST */
+    .adv-list { display: flex; flex-direction: column; gap: 16px; }
+    .adv-item { display: flex; gap: 14px; align-items: flex-start; background: rgba(255,255,255,0.04); border-radius: var(--radius-md); padding: 16px; border: 1px solid rgba(201,168,76,0.08); }
+    .adv-item i { color: var(--accent); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
+    .adv-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.88rem; color: white; margin-bottom: 4px; }
+    .adv-desc { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+    /* TEAM */
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+    .team-card { background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); text-align: center; }
+    .team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .team-photo { width: 100%; aspect-ratio: 1; background: var(--navy-gradient); display: flex; align-items: center; justify-content: center; }
+    .team-initials { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2rem; color: var(--accent); }
+    .team-body { padding: 24px; }
+    .team-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--primary); margin-bottom: 6px; }
+    .team-title { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 0.82rem; color: var(--accent); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .team-bio { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* PARTNERS */
+    .partners-static { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+    .partner-badge { display: inline-flex; align-items: center; padding: 10px 20px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: white; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.8rem; color: var(--dark); transition: var(--transition); }
+    .partner-badge:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ARBITRATION DETAILS */
+    .arb-count-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+    .arb-card { background: var(--primary-light); border-radius: var(--radius-md); padding: 24px; border-top: 3px solid var(--accent); }
+    .arb-card-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 10px; }
+    .arb-card-body { font-family: 'Open Sans', sans-serif; font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* FACTORS LIST */
+    .factors-list { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+    .factor-item { display: flex; gap: 10px; align-items: flex-start; }
+    .factor-item i { color: var(--accent); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0; }
+    .factor-text { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* QUOTE */
+    .quote-block { background: var(--primary); border-radius: var(--radius-lg); padding: 40px; position: relative; margin: 40px 0; overflow: hidden; }
+    .quote-block::before { content: '\201C'; position: absolute; top: -10px; left: 20px; font-family: 'Montserrat', sans-serif; font-size: 8rem; color: rgba(201,168,76,0.15); line-height: 1; }
+    .quote-text { font-family: 'Montserrat', sans-serif; font-style: italic; font-size: 1.15rem; color: white; line-height: 1.85; position: relative; z-index: 1; }
+    .quote-author { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 0.82rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 16px; }
+
+    /* FLOATING ELEMENTS */
+    .float-file-btn { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 900; writing-mode: vertical-rl; background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 20px 12px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); transition: var(--transition); box-shadow: var(--shadow-md); }
+    .float-file-btn:hover { padding-left: 18px; box-shadow: var(--shadow-gold); }
+    .back-top { position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.9rem; box-shadow: var(--shadow-md); transition: var(--transition); opacity: 0; pointer-events: none; z-index: 900; cursor: pointer; border: none; }
+    .back-top.visible { opacity: 1; pointer-events: all; }
+    .back-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
+
+    /* BUTTONS */
+    .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 28px; border-radius: var(--radius-pill); transition: var(--transition); }
+    .btn-gold:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .btn-outline-navy { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--primary); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 28px; border-radius: var(--radius-pill); transition: var(--transition); }
+    .btn-outline-navy:hover { background: var(--primary); color: white; }
+
+    /* FOOTER */
+    .footer { background: var(--dark); padding-top: 80px; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .footer-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--accent); margin-bottom: 6px; }
+    .footer-brand-sub { font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.5; margin-bottom: 16px; max-width: 200px; }
+    .footer-brand-desc { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-icon { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid rgba(201,168,76,0.4); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.85rem; transition: var(--transition); }
+    .social-icon:hover { background: var(--accent); color: var(--dark); border-color: var(--accent); }
+    .footer-col-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 20px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-link { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.65); transition: color 0.3s ease; }
+    .footer-link:hover { color: var(--accent); }
+    .footer-contact-item { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+    .footer-contact-icon { color: var(--accent); font-size: 0.85rem; margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-text { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.55; }
+    .footer-contact-text a { color: rgba(255,255,255,0.65); transition: color 0.3s ease; }
+    .footer-contact-text a:hover { color: var(--accent); }
+    .footer-bottom { padding: 24px 0; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-family: 'Open Sans', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+    .footer-authority { font-family: 'Open Sans', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 1024px) { .footer-top { grid-template-columns: 1fr 1fr; } .team-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) {
+      :root { --nav-height: 64px; }
+      .nav-links { display: none; } .nav-cta { display: none; } .hamburger { display: flex; }
+      .two-col { grid-template-columns: 1fr; } .pillars-grid { grid-template-columns: 1fr; }
+      .arb-count-grid { grid-template-columns: 1fr; } .team-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; } .footer-bottom { flex-direction: column; }
+      .float-file-btn { display: none; }
+    }
+  </style>
+  <link rel="icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-180x180.png" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://icamek.org/wp-content/uploads/2021/11/icamek-logo-white.png" alt="ICAMEK Logo" onerror="this.style.display='none'">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">ICAMEK</span>
+          <span class="nav-brand-sub">International Centre for Arbitration & Mediation in Kampala</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="arbitration-rules.html" class="nav-link">Arb. Rules</a></li>
+        <li><a href="mediation-rules.html" class="nav-link">Med. Rules</a></li>
+        <li><a href="training.html" class="nav-link">Training</a></li>
+        <li><a href="news.html" class="nav-link">News</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html#file-a-case" class="nav-cta">File a Case</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About Us</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="arbitration-rules.html" class="mobile-nav-link">Arbitration Rules</a>
+    <a href="mediation-rules.html" class="mobile-nav-link">Mediation Rules</a>
+    <a href="training.html" class="mobile-nav-link">Training</a>
+    <a href="news.html" class="mobile-nav-link">News & Events</a>
+    <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    <a href="contact.html#file-a-case" class="mobile-menu-cta">File a Case</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-pattern"></div>
+    <div class="page-hero-content">
+<h1 class="page-title">About ICAMEK</h1>
+      <div class="page-hero-divider"></div>
+      <p class="page-subtitle">Uganda's Premier Centre for Alternative Dispute Resolution</p>
+    </div>
+  </section>
+
+  <!-- SECTION 1: HISTORY & ORIGIN -->
+  <section class="content-section warm">
+    <div class="container">
+      <div class="two-col narrow">
+        <div class="reveal-left">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-h2">History & Origin</h2>
+          <p class="body-text">ICAMEK is an appointing authority that was issued with an instrument to appoint Arbitrators and Conciliators by the Minister of Justice and Constitutional Affairs on 23rd April 2019.</p>
+          <p class="body-text">ICAMEK provides dispute resolution services to Ugandan parties and the international business communities who wish to have their disputes resolved outside of the public courtroom. The Centre is an independent, non-profit company limited by guarantee.</p>
+          <p class="body-text">It promotes arbitration to the Ugandan business community as an effective alternative to litigation, and Uganda to the world as an investment hub and a place to conduct international arbitration.</p>
+          <p class="body-text">ICAMEK was established to address the growing number of commercial disputes and the huge case backlog within the courts  offering a faster, more confidential, and more flexible path to resolution for businesses, professionals, and governments.</p>
+          <p class="body-text">The Centre was officially launched on 25 April 2019 at Trust Tower, Nakasero, by Deputy Chief Justice Richard Buteera, with Hon. Kahinda Otafiire, Minister of Justice, in attendance.</p>
+        </div>
+        <div class="reveal-right">
+          <div class="facts-card">
+            <div class="fact-item">
+              <i class="fas fa-building fact-icon"></i>
+              <div>
+                <div class="fact-label">Full Name</div>
+                <div class="fact-value">International Centre for Arbitration and Mediation in Kampala</div>
+              </div>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-tag fact-icon"></i>
+              <div>
+                <div class="fact-label">Acronym</div>
+                <div class="fact-value">ICAMEK</div>
+              </div>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-calendar-check fact-icon"></i>
+              <div>
+                <div class="fact-label">Incorporated</div>
+                <div class="fact-value">26 July 2018</div>
+              </div>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-certificate fact-icon"></i>
+              <div>
+                <div class="fact-label">Appointing Authority Instrument</div>
+                <div class="fact-value">Issued 23 April 2019</div>
+              </div>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-landmark fact-icon"></i>
+              <div>
+                <div class="fact-label">Official Launch</div>
+                <div class="fact-value">25 April 2019  Trust Tower, Nakasero</div>
+              </div>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-map-marker-alt fact-icon"></i>
+              <div>
+                <div class="fact-label">Address</div>
+                <div class="fact-value">4th Floor, Trust Tower, Nakasero Road, Kampala, Uganda</div>
+              </div>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-balance-scale fact-icon"></i>
+              <div>
+                <div class="fact-label">Type</div>
+                <div class="fact-value">Independent, Not-for-Profit Organisation, Company Limited by Guarantee</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: WHAT WE DO -->
+  <section class="content-section alt">
+    <div class="container">
+      <div class="section-label reveal">What We Do</div>
+      <h2 class="section-h2 reveal">Our Mission & Purpose</h2>
+      <p class="body-text reveal" style="max-width: 760px;">ICAMEK is the first private sector-led institution focused on delivering the benefits of world-class Alternative Dispute Resolution to businesses, professionals, governments and communities alike. ICAMEK facilitates trade and business in Uganda by providing a neutral, independent and impartial venue for resolution of commercial disputes.</p>
+      <p class="body-text reveal" style="max-width: 760px;">Being an appointing authority, ICAMEK ensures that Arbitrators and Conciliators are sufficiently certified and properly vetted to a world class standard. ICAMEK offers Ugandan companies and individuals an optimal process to resolve business and related disputes confidentially, quickly and fairly under the supervision of the Centre's secretariat.</p>
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-icon"><i class="fas fa-compass"></i></div>
+          <div class="pillar-title">Flexible & Neutral</div>
+          <p class="pillar-desc">Provide parties with a flexible, natural and neutral seat for the resolution of disputes.</p>
+        </div>
+        <div class="pillar-card reveal reveal-delay-1">
+          <div class="pillar-icon"><i class="fas fa-lock"></i></div>
+          <div class="pillar-title">Confidential</div>
+          <p class="pillar-desc">Offer parties confidentiality and the freedom to choose how and where to resolve disputes.</p>
+        </div>
+        <div class="pillar-card reveal reveal-delay-2">
+          <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="pillar-title">Integrity & Enforceability</div>
+          <p class="pillar-desc">Administer ADR processes in a manner that ensures integrity and enforceability of awards and settlements.</p>
+        </div>
+        <div class="pillar-card reveal reveal-delay-3">
+          <div class="pillar-icon"><i class="fas fa-bullhorn"></i></div>
+          <div class="pillar-title">Promotion & Advocacy</div>
+          <p class="pillar-desc">Promote commercial awareness of arbitration and ADR mechanisms through advocacy, training workshops and conferences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SECRETARIAT -->
+  <section class="content-section warm">
+    <div class="container">
+      <div class="two-col">
+        <div class="reveal-left">
+          <div class="section-label">Administration</div>
+          <h2 class="section-h2">Our Secretariat & Administration</h2>
+          <p class="body-text">The Centre's secretariat is tasked with administering the Mediation and Arbitration process by providing clear procedural guidelines with time-lines, and a case administrator to assist the tribunal in the collation of documents and assist parties in complying with the Mediator/tribunal's directions.</p>
+          <p class="body-text">The Centre's administration process, which is unique in Uganda, provides the parties with the essential supervisory and logistical support vital for an effective outcome. The first step is that the parties agree to refer the matter to ICAMEK to administer.</p>
+          <p class="body-text">If and when a dispute arises, either party may request ICAMEK to proceed. Once the Centre accepts a request to administer the arbitration process according to its detailed Rules, it supports and guides the parties as they move towards the desired outcome: a binding arbitration award following a fair hearing in a tailor-made process.</p>
+        </div>
+        <div class="reveal-right">
+          <div class="section-label">Venue & Facilities</div>
+          <h2 class="section-h2">Our Premises</h2>
+          <p class="body-text">The Centre's premises offers a modern, centrally located and affordable venue for arbitration, mediation, other dispute hearings, and for meetings. It is an ideal venue for dispute resolution hearings or private meetings.</p>
+          <p class="body-text">Located at 4th Floor, Trust Tower, Nakasero Road  one of Kampala's most prestigious business addresses  ICAMEK's facilities are designed to facilitate professional, confidential dispute resolution proceedings.</p>
+          <div style="margin-top: 24px; padding: 20px; background: var(--primary-light); border-radius: var(--radius-md); border-left: 4px solid var(--accent);">
+            <div style="font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.82rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Location</div>
+            <div style="font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted);">4th Floor, Trust Tower<br>Nakasero Road, Kampala, Uganda</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: ARBITRATION DETAILS -->
+  <section class="content-section navy">
+    <div class="container">
+      <div class="section-label" style="color: var(--accent);">Arbitration</div>
+      <h2 class="section-h2 white reveal">Arbitration at ICAMEK</h2>
+      <p class="body-text dark reveal" style="max-width: 720px;">ICAMEK provides state-of-the-art institutional support to arbitral tribunals and parties in international and domestic arbitration in order to facilitate the efficient conduct of proceedings.</p>
+
+      <div class="arb-count-grid">
+        <div class="arb-card reveal">
+          <div class="arb-card-title">Number of Arbitrators</div>
+          <p class="arb-card-body">Under the ICAMEK Arbitration Rules, parties can agree on whether the dispute should be decided by a sole arbitrator or by a tribunal of three arbitrators. If parties do not agree, ICAMEK decides the number of arbitrators, taking into consideration the complexity of the case, the amount in dispute and any other relevant circumstances.</p>
+        </div>
+        <div class="arb-card reveal reveal-delay-1">
+          <div class="arb-card-title">Who Appoints the Arbitrators?</div>
+          <p class="arb-card-body">The majority of arbitration appointments in ICAMEK arbitrations are made by the parties. For sole arbitrators, ICAMEK provides a list from which parties jointly appoint. For three-member tribunals, each side appoints one and ICAMEK appoints the chairperson, unless the parties agree otherwise. If a party fails to appoint, ICAMEK will make the appointment.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px;" class="reveal">
+        <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-style: italic; font-size: 1.2rem; color: white; margin-bottom: 20px;">Factors Considered in Making Appointments</h3>
+        <div class="factors-list" style="columns: 2; column-gap: 32px;">
+          <div class="factor-item">
+            <i class="fas fa-check-circle"></i>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">The nature and circumstances of the dispute  this informs the type of expertise or specialisation required</span>
+          </div>
+          <div class="factor-item">
+            <i class="fas fa-check-circle"></i>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">Previous experience as an arbitrator  important for sole arbitrators or chairpersons to manage the process efficiently</span>
+          </div>
+          <div class="factor-item">
+            <i class="fas fa-check-circle"></i>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">The seat, applicable law and language of the arbitration</span>
+          </div>
+          <div class="factor-item">
+            <i class="fas fa-check-circle"></i>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">The arbitrator's availability  must have time to decide within the stipulated timeline</span>
+          </div>
+          <div class="factor-item">
+            <i class="fas fa-check-circle"></i>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">Tribunal balance  balance expertise, qualifications, seniority, language and other relevant factors</span>
+          </div>
+          <div class="factor-item">
+            <i class="fas fa-check-circle"></i>
+            <span class="factor-text" style="color: rgba(255,255,255,0.7);">Diversity  where there are many arbitrators of similar qualifications, the Board actively considers diversity of gender, age and national origin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: ADVANTAGES -->
+  <section class="content-section dark">
+    <div class="container">
+      <div class="section-label" style="color: var(--accent);">Why Choose ADR</div>
+      <h2 class="section-h2 white reveal">Advantages of Arbitration Over Courts</h2>
+      <p class="body-text dark reveal" style="max-width: 720px; margin-bottom: 32px;">Parties often seek to resolve their disputes through arbitration because of the potential advantages over the courts. Advantages include:</p>
+      <div class="adv-list">
+        <div class="adv-item reveal">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <div class="adv-title">Expert Arbitrators</div>
+            <p class="adv-desc">Unlike in court, parties can select an arbitrator with an appropriate degree of practical experience relevant to their dispute.</p>
+          </div>
+        </div>
+        <div class="adv-item reveal reveal-delay-1">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <div class="adv-title">Faster & More Flexible</div>
+            <p class="adv-desc">Arbitration is often faster than litigation in court, and a time limit can be placed on the length of the process. Arbitration can be cheaper and more flexible, more commercial and less formal than court.</p>
+          </div>
+        </div>
+        <div class="adv-item reveal reveal-delay-2">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <div class="adv-title">Confidentiality</div>
+            <p class="adv-desc">Unlike court rulings, arbitration proceedings and arbitral awards are confidential, protecting sensitive commercial information from public disclosure.</p>
+          </div>
+        </div>
+        <div class="adv-item reveal reveal-delay-3">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <div class="adv-title">Limited Appeals</div>
+            <p class="adv-desc">Unlike in court, there are very limited avenues for appeal of an arbitral award, which limits the duration of the dispute and any associated liability.</p>
+          </div>
+        </div>
+        <div class="adv-item reveal reveal-delay-4">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <div class="adv-title">International Enforceability</div>
+            <p class="adv-desc">Due to the provisions of the New York Convention 1958, arbitral awards are generally easier to enforce in other nations than court judgments, making ICAMEK arbitration ideal for cross-border disputes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: MEDIATION -->
+  <section class="content-section warm">
+    <div class="container">
+      <div class="two-col">
+        <div class="reveal-left">
+          <div class="section-label">Mediation</div>
+          <h2 class="section-h2">Mediation at ICAMEK</h2>
+          <p class="body-text">ICAMEK offers a confidential mediation process where an independent mediator facilitates communication and open discussion to assist the parties in reaching a settlement in private.</p>
+          <p class="body-text">ICAMEK's mediation focuses primarily on the needs and interests of the parties and is an interactive process whereby the mediator provides expertise and support to parties who wish to reach agreement, whether to preserve their relationship or to resolve a single dispute.</p>
+          <p class="body-text">Ground rules are established at the outset and the mediator may engage all parties together or privately to find common ground.</p>
+          <p class="body-text">ICAMEK has published a set of Mediation Rules which apply in the event of a dispute referred to ICAMEK for mediation. Depending on the nature of the dispute, ICAMEK will appoint a suitable mediator and professionally administer the process.</p>
+          <p class="body-text">Mediation is not a binding process, but once consensus is reached, a written agreement is drawn up which commits the parties to their agreement and is legally binding.</p>
+          <a href="https://icamek.org/wp-content/uploads/2022/01/ICAMEK-MEDIATION-RULES-2018.pdf" class="btn-gold" style="margin-top: 16px;" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-download"></i> Download Mediation Rules
+          </a>
+        </div>
+        <div class="reveal-right">
+          <div class="quote-block">
+            <p class="quote-text">"ICAMEK's mediation focuses primarily on the needs and interests of the parties and is an interactive process whereby the mediator provides expertise and support to parties who wish to reach agreement."</p>
+            <div class="quote-author"> ICAMEK, About Mediation</div>
+          </div>
+          <div style="margin-top: 24px;">
+            <div class="section-label">Download Forms</div>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+              <a href="https://icamek.org/wp-content/uploads/2022/01/ICAMEK-Request-for-Mediation-application-form.pdf" style="display: flex; align-items: center; gap: 10px; padding: 14px 20px; background: var(--primary-light); border-radius: var(--radius-md); border: 1px solid rgba(26,46,74,0.15); font-family: 'Open Sans', sans-serif; font-size: 0.88rem; color: var(--primary); font-weight: 600; transition: var(--transition);" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-pdf" style="color: var(--accent);"></i> Request for Mediation Form
+              </a>
+              <a href="https://icamek.org/wp-content/uploads/2022/01/ICAMEK-MEDIATION-RULES-2018.pdf" style="display: flex; align-items: center; gap: 10px; padding: 14px 20px; background: var(--primary-light); border-radius: var(--radius-md); border: 1px solid rgba(26,46,74,0.15); font-family: 'Open Sans', sans-serif; font-size: 0.88rem; color: var(--primary); font-weight: 600; transition: var(--transition);" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-pdf" style="color: var(--accent);"></i> ICAMEK Mediation Rules 2018
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: KEY PEOPLE -->
+  <section class="content-section alt">
+    <div class="container">
+      <div class="section-label reveal">Our Team</div>
+      <h2 class="section-h2 reveal">Key People & Leadership</h2>
+      <p class="body-text reveal" style="max-width: 640px; margin-bottom: 40px;">ICAMEK is led by experienced legal and business professionals committed to advancing Alternative Dispute Resolution in Uganda and across East Africa.</p>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-photo">
+            <span class="team-initials">NK</span>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Norah Kagwa</div>
+            <div class="team-title">Registrar</div>
+            <p class="team-bio">The Registrar of ICAMEK oversees the administration of all arbitration and mediation proceedings, ensuring procedural compliance and guiding parties through the ICAMEK process from filing to award.</p>
+          </div>
+        </div>
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-photo">
+            <span class="team-initials">FG</span>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Francis Gimara</div>
+            <div class="team-title">Board Member</div>
+            <p class="team-bio">Board Member representing the founding partner institutions, providing strategic oversight and governance to ICAMEK's operations and development as Uganda's premier ADR institution.</p>
+          </div>
+        </div>
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-photo">
+            <span class="team-initials">OKM</span>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Olivia Kyarimpa Matovu MCIArb</div>
+            <div class="team-title">Training Facilitator / Partner, Ligomarc Advocates</div>
+            <p class="team-bio">Mrs. Olivia Kyarimpa Matovu MCIArb is a Partner at Ligomarc Advocates and a featured trainer for ICAMEK's Construction Claims & Dispute Avoidance training programmes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: FOUNDING PARTNERS -->
+  <section class="content-section warm">
+    <div class="container">
+      <div class="section-label reveal">Partners</div>
+      <h2 class="section-h2 reveal">Founding Partners & Supporters</h2>
+      <p class="body-text reveal" style="max-width: 640px; margin-bottom: 32px;">ICAMEK was established through the collaborative effort of Uganda's leading legal, financial, and private sector organisations, all committed to advancing the ADR ecosystem in Uganda.</p>
+      <div class="partners-static reveal">
+        <span class="partner-badge">Uganda Law Society</span>
+        <span class="partner-badge">Uganda Bankers' Association</span>
+        <span class="partner-badge">Private Sector Foundation Uganda (PSFU)</span>
+        <span class="partner-badge">Uganda Insurers Association</span>
+        <span class="partner-badge">Justice, Law & Order Sector (JLOS)</span>
+        <span class="partner-badge">Bank of Uganda</span>
+        <span class="partner-badge">Association of Architects</span>
+        <span class="partner-badge">Institution of Surveyors & Valuers</span>
+        <span class="partner-badge">Uganda Manufacturers' Association</span>
+        <span class="partner-badge">KACITA (Kampala City Traders Association)</span>
+        <span class="partner-badge">Institute of Chartered Public Accountants (ICPAU)</span>
+        <span class="partner-badge">Uganda Judiciary</span>
+        <span class="partner-badge">Ministry of Justice & Constitutional Affairs</span>
+      </div>
+      <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;" class="reveal">
+        <a href="contact.html#file-a-case" class="btn-gold"><i class="fas fa-gavel"></i> File a Case</a>
+        <a href="services.html" class="btn-outline-navy">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">ICAMEK</div>
+          <div class="footer-brand-sub">International Centre for Arbitration and Mediation in Kampala</div>
+          <p class="footer-brand-desc">Uganda's first private sector-led institution for world-class Alternative Dispute Resolution.</p>
+          <div class="footer-social">
+            <a href="https://ug.linkedin.com/company/international-centre-for-arbitration-and-mediation-in-kampala" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/ICAMEKUG/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html#arbitration" class="footer-link">Arbitration</a></li>
+            <li><a href="services.html#mediation" class="footer-link">Mediation</a></li>
+            <li><a href="services.html#conciliation" class="footer-link">Conciliation</a></li>
+            <li><a href="training.html" class="footer-link">Training</a></li>
+            <li><a href="services.html#venue" class="footer-link">Venue & Facilities</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="arbitration-rules.html" class="footer-link">Arbitration Rules</a></li>
+            <li><a href="mediation-rules.html" class="footer-link">Mediation Rules</a></li>
+            <li><a href="news.html" class="footer-link">News & Events</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt footer-contact-icon"></i><div class="footer-contact-text">4th Floor, Trust Tower, Nakasero Road, Kampala, Uganda</div></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div></div>
+          <div class="footer-contact-item"><i class="fas fa-folder-open footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:file@icamek.org">file@icamek.org</a></div></div>
+          <div class="footer-contact-item"><i class="fas fa-clock footer-contact-icon"></i><div class="footer-contact-text">Mon9:00 AM 5:00 PM</div></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">2026 International Centre for Arbitration and Mediation in Kampala (ICAMEK). All rights reserved.</div>
+        <div class="footer-authority">An Appointing Authority by the Minister of Justice  Instrument issued 23 April 2019</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="contact.html#file-a-case" class="float-file-btn" aria-label="File a Case">File a Case</a>
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+      const backTop = document.getElementById('backTop');
+      if (window.scrollY > 500) backTop.classList.add('visible'); else backTop.classList.remove('visible');
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => { hamburger.classList.toggle('menu-open'); mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : ''; });
+    mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { hamburger.classList.remove('menu-open'); mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }); });
+    document.getElementById('backTop').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
+

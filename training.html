@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADR Training Programs | ICAMEK  International Centre for Arbitration and Mediation in Kampala</title>
+  <meta name="description" content="ICAMEK offers professional ADR training programs in arbitration, mediation and construction claims dispute avoidance in Kampala, Uganda. Grow your ADR practice.">
+  <meta name="keywords" content="ADR training Uganda, arbitration training Kampala, mediation training Uganda, construction claims training, dispute resolution courses Uganda">
+  <meta property="og:title" content="ADR Training Programs | ICAMEK  Grow Your Dispute Resolution Practice">
+  <meta property="og:url" content="https://icamek.org/training/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://icamek.org/training/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ===== HIDE SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    html {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+      overflow-x: hidden;
+      width: 100%;
+    }
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    :root {
+      --primary: #1A2E4A; --primary-dark: #0D1B2E; --primary-light: rgba(26,46,74,0.08);
+      --accent: #C9A84C; --accent-light: rgba(201,168,76,0.15);
+      --dark: #0D1B2E; --text: #1A1A2E; --text-muted: #5A6A7A;
+      --surface: #FFFFFF; --surface-alt: #FFFFFF; --surface-warm: #FFFFFF; --border: #E8ECF2;
+      --gold-gradient: linear-gradient(135deg, #C9A84C 0%, #E8D08A 50%, #C9A84C 100%);
+      --navy-gradient: linear-gradient(135deg, #0D1B2E 0%, #1A2E4A 100%);
+      --shadow-sm: 0 2px 12px rgba(26,46,74,0.07); --shadow-md: 0 8px 40px rgba(26,46,74,0.10);
+      --shadow-lg: 0 24px 64px rgba(26,46,74,0.14); --shadow-gold: 0 4px 24px rgba(201,168,76,0.28);
+      --radius-sm: 4px; --radius-md: 10px; --radius-lg: 20px; --radius-pill: 999px;
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); --nav-height: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--surface); line-height: 1.8; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; } ul { list-style: none; }
+    @keyframes goldShimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(48px); transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    .navbar { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000; background: rgba(13,27,46,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-bottom: 1px solid rgba(201,168,76,0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .navbar.scrolled { height: 70px; background: rgba(13,27,46,0.95); }
+    .navbar-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .nav-brand img { max-height: 56px; max-width: 260px; object-fit: contain; width: auto; transition: var(--transition); }
+    .nav-brand-text { display: none; }
+    .nav-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent); line-height: 1.1; letter-spacing: 0.04em; }
+    .nav-brand-sub { font-family: 'Open Sans', sans-serif; font-size: 0.55rem; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; text-transform: uppercase; max-width: 180px; line-height: 1.3; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-link { position: relative; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.8); padding: 8px 10px; transition: var(--transition); white-space: nowrap; }
+    .nav-link::after { content: ''; position: absolute; bottom: 4px; left: 10px; width: 0; height: 1.5px; background: var(--gold-gradient); transition: width 0.3s ease; }
+    .nav-link:hover, .nav-link.active { color: var(--accent); }
+    .nav-link:hover::after { width: calc(100% - 20px); }
+    .nav-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 10px 20px; border-radius: var(--radius-pill); transition: var(--transition); flex-shrink: 0; }
+    .nav-cta:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 1100; }
+    .bar { width: 24px; height: 2px; background: white; border-radius: 2px; transition: var(--transition); }
+    .menu-open .bar:nth-child(1) { transform: rotate(45deg) translateY(10px); }
+    .menu-open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .menu-open .bar:nth-child(3) { transform: rotate(-45deg) translateY(-10px); }
+    .mobile-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--dark); z-index: 1050; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 32px; transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1); padding: 80px 24px; }
+    .mobile-menu.open { right: 0; }
+    .mobile-nav-link { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 1.2rem; color: white; opacity: 0; transform: translateX(30px); transition: color 0.3s ease, opacity 0.4s ease, transform 0.4s ease; }
+    .mobile-menu.open .mobile-nav-link { opacity: 1; transform: translateX(0); }
+    .mobile-menu.open .mobile-nav-link:nth-child(1) { transition-delay: 0.2s; } .mobile-menu.open .mobile-nav-link:nth-child(2) { transition-delay: 0.26s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(3) { transition-delay: 0.32s; } .mobile-menu.open .mobile-nav-link:nth-child(4) { transition-delay: 0.38s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(5) { transition-delay: 0.44s; } .mobile-menu.open .mobile-nav-link:nth-child(6) { transition-delay: 0.50s; }
+    .mobile-menu.open .mobile-nav-link:nth-child(7) { transition-delay: 0.56s; } .mobile-menu.open .mobile-nav-link:nth-child(8) { transition-delay: 0.62s; }
+    .mobile-nav-link:hover { color: var(--accent); }
+    .mobile-menu-cta { background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 36px; border-radius: var(--radius-pill); opacity: 0; transition: opacity 0.4s ease 0.68s; }
+    .mobile-menu.open .mobile-menu-cta { opacity: 1; }
+
+    .page-hero { background: var(--navy-gradient); min-height: 50vh; display: flex; align-items: flex-end; padding-bottom: 64px; padding-top: calc(var(--nav-height) + 48px); position: relative; overflow: hidden; }
+    .page-hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(201,168,76,0.07) 1px, transparent 1px); background-size: 32px 32px; }
+    .page-hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .breadcrumb { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,0.5); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { margin: 0 8px; color: rgba(255,255,255,0.8); }
+    .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); color: white; letter-spacing: 0.04em; margin-bottom: 16px; animation: fadeInUp 0.6s ease both; }
+    .page-subtitle { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 1.05rem; color: var(--accent); animation: fadeInUp 0.6s ease 0.2s both; }
+    .page-hero-divider { width: 60px; height: 2px; background: var(--gold-gradient); margin: 20px 0; background-size: 200% auto; animation: goldShimmer 4s linear infinite; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-label { display: inline-flex; align-items: center; gap: 10px; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 16px; }
+    .section-label::before { content: ''; display: block; width: 40px; height: 2px; background: var(--gold-gradient); }
+    .section-h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--primary); margin-bottom: 20px; line-height: 1.3; }
+
+    /* INTRO SECTION */
+    .intro-section { background: #FFFFFF; padding: 80px 0; }
+    .intro-body { font-family: 'Open Sans', sans-serif; font-size: 1.05rem; color: var(--text-muted); line-height: 1.85; max-width: 860px; margin-bottom: 16px; }
+
+    /* TRAINING PROGRAMS */
+    .programs-section { background: #F8F9FB; padding: 80px 0; }
+    .programs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 48px; }
+    .program-card { background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); border-top: 4px solid var(--accent); }
+    .program-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .program-card-header { background: var(--navy-gradient); padding: 32px; display: flex; align-items: flex-start; gap: 20px; }
+    .program-icon { width: 64px; height: 64px; border-radius: var(--radius-md); background: rgba(201,168,76,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .program-icon i { font-size: 1.6rem; color: var(--accent); }
+    .program-header-text { flex: 1; }
+    .program-badge { display: inline-flex; align-items: center; background: rgba(201,168,76,0.2); color: var(--accent); font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 12px; border-radius: var(--radius-pill); margin-bottom: 10px; }
+    .program-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem; color: white; line-height: 1.3; }
+    .program-body { padding: 28px; }
+    .program-desc { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 20px; }
+    .program-details { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .program-detail { display: flex; gap: 10px; align-items: flex-start; }
+    .program-detail i { color: var(--accent); font-size: 0.85rem; margin-top: 3px; flex-shrink: 0; }
+    .program-detail span { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+    .program-detail strong { color: var(--primary); }
+    .btn-program { display: inline-flex; align-items: center; gap: 8px; background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 12px 24px; border-radius: var(--radius-pill); transition: var(--transition); }
+    .btn-program:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+
+    /* WHY TRAIN SECTION */
+    .why-section { background: var(--primary); padding: 80px 0; }
+    .why-h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.2rem); color: white; margin-bottom: 12px; }
+    .why-sub { font-family: 'Open Sans', sans-serif; font-size: 1rem; color: rgba(255,255,255,0.65); max-width: 640px; margin-bottom: 48px; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .why-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.15); border-radius: var(--radius-lg); padding: 28px; text-align: center; transition: var(--transition); }
+    .why-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+    .why-card-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(201,168,76,0.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .why-card-icon i { font-size: 1.4rem; color: var(--accent); }
+    .why-card-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.9rem; color: white; margin-bottom: 8px; }
+    .why-card-desc { font-family: 'Open Sans', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+    /* MOOT SECTION */
+    .moot-section { background: #FFFFFF; padding: 80px 0; }
+    .moot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 40px; }
+    .moot-body { font-family: 'Open Sans', sans-serif; font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 16px; }
+    .moot-panel { background: var(--navy-gradient); border-radius: var(--radius-lg); padding: 40px; }
+    .moot-panel-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
+    .moot-panel-body { font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 24px; }
+    .moot-links { display: flex; flex-direction: column; gap: 10px; }
+    .moot-link { display: flex; align-items: center; gap: 10px; font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: var(--accent); padding: 10px 0; border-bottom: 1px solid rgba(201,168,76,0.15); transition: gap 0.3s ease; }
+    .moot-link:last-child { border-bottom: none; }
+    .moot-link:hover { gap: 14px; }
+
+    /* CTA STRIP */
+    .cta-strip { background: var(--gold-gradient); padding: 64px 0; }
+    .cta-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
+    .cta-h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--dark); margin-bottom: 8px; }
+    .cta-sub { font-family: 'Open Sans', sans-serif; font-size: 0.95rem; color: rgba(13,27,46,0.7); }
+    .btn-dark { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: white; font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 28px; border-radius: var(--radius-pill); transition: var(--transition); white-space: nowrap; }
+    .btn-dark:hover { background: var(--primary-dark); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+    .float-file-btn { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 900; writing-mode: vertical-rl; background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 20px 12px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); transition: var(--transition); box-shadow: var(--shadow-md); }
+    .float-file-btn:hover { padding-left: 18px; box-shadow: var(--shadow-gold); }
+    .back-top { position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.9rem; box-shadow: var(--shadow-md); transition: var(--transition); opacity: 0; pointer-events: none; z-index: 900; cursor: pointer; border: none; }
+    .back-top.visible { opacity: 1; pointer-events: all; }
+
+    .footer { background: var(--dark); padding-top: 80px; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .footer-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--accent); margin-bottom: 6px; }
+    .footer-brand-sub { font-family: 'Open Sans', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.5; margin-bottom: 16px; max-width: 200px; }
+    .footer-brand-desc { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-icon { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid rgba(201,168,76,0.4); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.85rem; transition: var(--transition); }
+    .social-icon:hover { background: var(--accent); color: var(--dark); border-color: var(--accent); }
+    .footer-col-title { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 20px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-link { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.65); transition: color 0.3s ease; }
+    .footer-link:hover { color: var(--accent); }
+    .footer-contact-item { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+    .footer-contact-icon { color: var(--accent); font-size: 0.85rem; margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-text { font-family: 'Open Sans', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.55; }
+    .footer-contact-text a { color: rgba(255,255,255,0.65); }
+    .footer-contact-text a:hover { color: var(--accent); }
+    .footer-bottom { padding: 24px 0; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-family: 'Open Sans', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+    .footer-authority { font-family: 'Open Sans', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 1024px) { .why-grid { grid-template-columns: repeat(2, 1fr); } .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) { :root { --nav-height: 64px; } .nav-links { display: none; } .nav-cta { display: none; } .hamburger { display: flex; } .programs-grid { grid-template-columns: 1fr; } .why-grid { grid-template-columns: 1fr 1fr; } .moot-grid { grid-template-columns: 1fr; } .footer-top { grid-template-columns: 1fr; gap: 32px; } .footer-bottom { flex-direction: column; } .float-file-btn { display: none; } .cta-strip-inner { flex-direction: column; } }
+  </style>
+  <link rel="icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="https://icamek.org/wp-content/uploads/2021/11/cropped-logo-180x180.png" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://icamek.org/wp-content/uploads/2021/11/icamek-logo-white.png" alt="ICAMEK Logo" onerror="this.style.display='none'">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">ICAMEK</span>
+          <span class="nav-brand-sub">International Centre for Arbitration & Mediation in Kampala</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="arbitration-rules.html" class="nav-link">Arb. Rules</a></li>
+        <li><a href="mediation-rules.html" class="nav-link">Med. Rules</a></li>
+        <li><a href="training.html" class="nav-link active">Training</a></li>
+        <li><a href="news.html" class="nav-link">News</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html#file-a-case" class="nav-cta">File a Case</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About Us</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="arbitration-rules.html" class="mobile-nav-link">Arbitration Rules</a>
+    <a href="mediation-rules.html" class="mobile-nav-link">Mediation Rules</a>
+    <a href="training.html" class="mobile-nav-link">Training</a>
+    <a href="news.html" class="mobile-nav-link">News & Events</a>
+    <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    <a href="contact.html#file-a-case" class="mobile-menu-cta">File a Case</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="page-hero-pattern"></div>
+    <div class="page-hero-content">
+<h1 class="page-title">ADR Training Programs</h1>
+      <div class="page-hero-divider"></div>
+      <p class="page-subtitle">Growing Uganda's Pool of ADR Practitioners</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="section-label reveal">Our Programs</div>
+      <h2 class="section-h2 reveal">Professional ADR Training & Accreditation</h2>
+      <p class="intro-body reveal">The Centre offers training programs across the spectrum of dispute resolution (mediation, arbitration, construction claim), geared towards growing the pool of ADR practitioners in Uganda. The courses are presented by seasoned practitioners in the different fields and enables participants to master essential skills in all aspects of dispute resolution which will be of enormous importance to their careers and their clients.</p>
+      <p class="intro-body reveal">ICAMEK offers Ugandan companies and individuals an optimal process to resolve business and related disputes confidentially, quickly and fairly. Our training programs prepare lawyers, engineers, accountants, and other professionals to play a meaningful role in this ecosystem as certified ADR practitioners.</p>
+    </div>
+  </section>
+
+  <!-- PROGRAMS GRID -->
+  <section class="programs-section">
+    <div class="container">
+      <div class="section-label reveal">Available Courses</div>
+      <h2 class="section-h2 reveal">Training Programs</h2>
+      <div class="programs-grid">
+        <!-- PROGRAM 1 -->
+        <div class="program-card reveal">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fas fa-hard-hat"></i></div>
+            <div class="program-header-text">
+              <span class="program-badge">Specialist Course</span>
+              <div class="program-name">Construction Claims & Dispute Avoidance</div>
+            </div>
+          </div>
+          <div class="program-body">
+            <p class="program-desc">A specialised training programme focused on the identification, valuation, negotiation and avoidance of construction claims and disputes. This course equips construction professionals, lawyers, engineers and project managers with practical tools to prevent and resolve disputes in the construction sector.</p>
+            <div class="program-details">
+              <div class="program-detail">
+                <i class="fas fa-user-tie"></i>
+                <span><strong>Facilitator:</strong> Mrs. Olivia Kyarimpa Matovu MCIArb, Partner at Ligomarc Advocates</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Venue:</strong> Latitude 0 Hotel, Mobutu Road, Makindye, Kampala</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-users"></i>
+                <span><strong>Target Audience:</strong> Lawyers, engineers, architects, quantity surveyors, project managers, and construction professionals</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-certificate"></i>
+                <span><strong>Certification:</strong> ICAMEK Certificate of Completion issued to all participants</span>
+              </div>
+            </div>
+            <a href="mailto:admin@icamek.org?subject=Register%20Interest%20Construction%20Claims%20Training" class="btn-program">
+              <i class="fas fa-envelope"></i> Register Interest
+            </a>
+          </div>
+        </div>
+
+        <!-- PROGRAM 2 -->
+        <div class="program-card reveal reveal-delay-1">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fas fa-gavel"></i></div>
+            <div class="program-header-text">
+              <span class="program-badge">Foundation Course</span>
+              <div class="program-name">Arbitration Practice & Procedure</div>
+            </div>
+          </div>
+          <div class="program-body">
+            <p class="program-desc">A comprehensive introductory and intermediate training on institutional arbitration practice and procedure. Covers the ICAMEK Arbitration Rules, arbitrator appointment, drafting awards, conducting hearings, and enforcement under the New York Convention.</p>
+            <div class="program-details">
+              <div class="program-detail">
+                <i class="fas fa-user-tie"></i>
+                <span><strong>Facilitators:</strong> Seasoned practitioners in the field of arbitration</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Venue:</strong> ICAMEK Premises, 4th Floor Trust Tower, Nakasero Road, Kampala</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-users"></i>
+                <span><strong>Target Audience:</strong> Lawyers, law students, business professionals, and aspiring arbitrators</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-certificate"></i>
+                <span><strong>Certification:</strong> ICAMEK Certificate of Completion</span>
+              </div>
+            </div>
+            <a href="mailto:admin@icamek.org?subject=Register%20Interest%20Arbitration%20Training" class="btn-program">
+              <i class="fas fa-envelope"></i> Register Interest
+            </a>
+          </div>
+        </div>
+
+        <!-- PROGRAM 3 -->
+        <div class="program-card reveal reveal-delay-2">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fas fa-handshake"></i></div>
+            <div class="program-header-text">
+              <span class="program-badge">Skills Course</span>
+              <div class="program-name">Mediation Skills Training</div>
+            </div>
+          </div>
+          <div class="program-body">
+            <p class="program-desc">Practical mediation skills training covering mediation theory, models, negotiation techniques, and the mediator's role in facilitating settlement. Participants engage in role-play exercises reflecting real-world commercial disputes under the ICAMEK Mediation Rules.</p>
+            <div class="program-details">
+              <div class="program-detail">
+                <i class="fas fa-user-tie"></i>
+                <span><strong>Facilitators:</strong> Experienced mediators from ICAMEK's panel</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Venue:</strong> ICAMEK Premises, 4th Floor Trust Tower, Nakasero Road, Kampala</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-users"></i>
+                <span><strong>Target Audience:</strong> Lawyers, HR professionals, business owners, community leaders</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-certificate"></i>
+                <span><strong>Certification:</strong> ICAMEK Certificate of Completion</span>
+              </div>
+            </div>
+            <a href="mailto:admin@icamek.org?subject=Register%20Interest%20Mediation%20Training" class="btn-program">
+              <i class="fas fa-envelope"></i> Register Interest
+            </a>
+          </div>
+        </div>
+
+        <!-- PROGRAM 4 -->
+        <div class="program-card reveal reveal-delay-3">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="program-header-text">
+              <span class="program-badge">Advanced Course</span>
+              <div class="program-name">Commercial Dispute Resolution Masterclass</div>
+            </div>
+          </div>
+          <div class="program-body">
+            <p class="program-desc">An advanced programme for experienced practitioners covering complex commercial arbitration, international arbitration under major institutional rules, multi-party disputes, interim measures, and appeal mechanisms. Designed for senior lawyers and business professionals.</p>
+            <div class="program-details">
+              <div class="program-detail">
+                <i class="fas fa-user-tie"></i>
+                <span><strong>Facilitators:</strong> Senior ADR practitioners and internationally recognised arbitrators</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Venue:</strong> Latitude 0 Hotel, Mobutu Road, Makindye, Kampala</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-users"></i>
+                <span><strong>Target Audience:</strong> Senior lawyers, in-house counsel, judges, government officials</span>
+              </div>
+              <div class="program-detail">
+                <i class="fas fa-certificate"></i>
+                <span><strong>Certification:</strong> ICAMEK Advanced Certificate of Completion</span>
+              </div>
+            </div>
+            <a href="mailto:admin@icamek.org?subject=Register%20Interest%20Masterclass" class="btn-program">
+              <i class="fas fa-envelope"></i> Register Interest
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TRAIN WITH ICAMEK -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-label" style="color: var(--accent);">Why Choose ICAMEK</div>
+      <h2 class="why-h2 reveal">Why Train with ICAMEK?</h2>
+      <p class="why-sub reveal">Our training programs are uniquely positioned to equip you with the practical skills needed to thrive as an ADR practitioner in Uganda and beyond.</p>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-card-icon"><i class="fas fa-user-graduate"></i></div>
+          <div class="why-card-title">Expert Facilitators</div>
+          <p class="why-card-desc">All courses are presented by seasoned practitioners in the different fields of dispute resolution.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-card-icon"><i class="fas fa-certificate"></i></div>
+          <div class="why-card-title">Recognised Certification</div>
+          <p class="why-card-desc">Receive an ICAMEK certificate recognised by Uganda's legal and business communities.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-card-icon"><i class="fas fa-hands-helping"></i></div>
+          <div class="why-card-title">Practical Focus</div>
+          <p class="why-card-desc">Role-plays, case studies, and exercises reflecting real Ugandan and international commercial disputes.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-card-icon"><i class="fas fa-network-wired"></i></div>
+          <div class="why-card-title">Network Access</div>
+          <p class="why-card-desc">Join a growing network of ADR practitioners across Uganda and East Africa through ICAMEK's ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIVERSITY MOOT -->
+  <section class="moot-section">
+    <div class="container">
+      <div class="section-label reveal"> Moot Competition</div>
+      <h2 class="section-h2 reveal">ICAMEK University Moot Competition</h2>
+      <div class="moot-grid">
+        <div class="reveal">
+          <p class="moot-body">ICAMEK runs an annual University Moot Competition, providing law students across Uganda with practical experience in arbitration and dispute resolution. The competition exposes students to the world of commercial arbitration, helping to build the next generation of ADR practitioners in Uganda.</p>
+          <p class="moot-body">Participating universities engage in realistic arbitration simulations, with student teams acting as counsel for claimants and respondents before a panel of experienced arbitrators. The competition is judged by senior practitioners drawn from ICAMEK's panel.</p>
+          <p class="moot-body">The competition serves ICAMEK's broader mission of promoting commercial awareness of arbitration and ADR mechanisms through advocacy and education.</p>
+          <a href="mailto:admin@icamek.org?subject=University%20Moot%20Competition%20Enquiry" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; background: var(--gold-gradient); color: var(--primary); font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 12px 24px; border-radius: var(--radius-pill); transition: var(--transition);">
+            <i class="fas fa-envelope"></i> Register Your University
+          </a>
+        </div>
+        <div class="reveal">
+          <div class="moot-panel">
+            <div class="moot-panel-title">Moot Resources</div>
+            <p class="moot-panel-body">Download the moot problem material and register your university team for the next ICAMEK University Moot Challenge.</p>
+            <div class="moot-links">
+              <a href="https://icamek.org/index.php/moot-competition-overview/" class="moot-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-info-circle"></i> Moot Competition Overview <i class="fas fa-arrow-right" style="margin-left: auto;"></i>
+              </a>
+              <a href="https://icamek.org/index.php/icamek-moot-problem-material/" class="moot-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-alt"></i> Moot Problem Material <i class="fas fa-arrow-right" style="margin-left: auto;"></i>
+              </a>
+              <a href="https://icamek.org/index.php/register-for-the-university-moot-challenge/" class="moot-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-user-plus"></i> Register for Moot Challenge <i class="fas fa-arrow-right" style="margin-left: auto;"></i>
+              </a>
+              <a href="contact.html" class="moot-link">
+                <i class="fas fa-envelope"></i> Contact ICAMEK <i class="fas fa-arrow-right" style="margin-left: auto;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-strip-inner">
+        <div>
+          <h2 class="cta-h2">Ready to Advance Your ADR Practice?</h2>
+          <p class="cta-sub">Contact our Registrar, Norah Kagwa, to discuss upcoming training programs and registration.</p>
+        </div>
+        <a href="mailto:admin@icamek.org?subject=Training%20Enquiry" class="btn-dark"><i class="fas fa-envelope"></i> Email admin@icamek.org</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">ICAMEK</div>
+          <div class="footer-brand-sub">International Centre for Arbitration and Mediation in Kampala</div>
+          <p class="footer-brand-desc">Uganda's first private sector-led institution for world-class Alternative Dispute Resolution.</p>
+          <div class="footer-social">
+            <a href="https://ug.linkedin.com/company/international-centre-for-arbitration-and-mediation-in-kampala" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/ICAMEKUG/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html#arbitration" class="footer-link">Arbitration</a></li>
+            <li><a href="services.html#mediation" class="footer-link">Mediation</a></li>
+            <li><a href="services.html#conciliation" class="footer-link">Conciliation</a></li>
+            <li><a href="training.html" class="footer-link">Training & Accreditation</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="arbitration-rules.html" class="footer-link">Arbitration Rules</a></li>
+            <li><a href="news.html" class="footer-link">News & Events</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt footer-contact-icon"></i><div class="footer-contact-text">4th Floor, Trust Tower, Nakasero Road, Kampala, Uganda</div></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:admin@icamek.org">admin@icamek.org</a></div></div>
+          <div class="footer-contact-item"><i class="fas fa-folder-open footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:file@icamek.org">file@icamek.org</a></div></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">2026 International Centre for Arbitration and Mediation in Kampala (ICAMEK). All rights reserved.</div>
+        <div class="footer-authority">An Appointing Authority by the Minister of Justice  Instrument issued 23 April 2019</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="contact.html#file-a-case" class="float-file-btn" aria-label="File a Case">File a Case</a>
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+      const backTop = document.getElementById('backTop');
+      if (window.scrollY > 500) backTop.classList.add('visible'); else backTop.classList.remove('visible');
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => { hamburger.classList.toggle('menu-open'); mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : ''; });
+    mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { hamburger.classList.remove('menu-open'); mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }); });
+    document.getElementById('backTop').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
+
